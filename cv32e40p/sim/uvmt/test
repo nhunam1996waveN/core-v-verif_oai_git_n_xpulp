@@ -1,0 +1,5 @@
+rv32ip_sc_tests = add8
+  
+rv32ip_tests = $(addsuffix .elf, $(rv32ip_sc_tests))
+
+target_tests += $(rv32ip_tests)

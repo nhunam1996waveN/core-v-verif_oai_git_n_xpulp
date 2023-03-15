@@ -1,0 +1,235 @@
+# See LICENSE for license details.
+#*****************************************************************************
+# clrs32.S
+#-----------------------------------------------------------------------------
+#
+# Test add instruction.
+#
+
+
+#include "riscv_test.h"
+#include "compliance_test.h"
+#include "compliance_io.h"
+#include "aw_test_macros.h"
+
+RVTEST_RV64U
+RV_COMPLIANCE_CODE_BEGIN
+
+  #-------------------------------------------------------------
+  # Arithmetic tests
+  #-------------------------------------------------------------
+
+TEST_R_OP( 2 , clrs32, 0x00000000, 0x65cd80b6, 8); 
+TEST_R_OP( 3 , clrs32, 0x0000001f, 0x00000000, 12); 
+TEST_R_OP( 4 , clrs32, 0x00000000, 0x80000000, 16); 
+TEST_R_OP( 5 , clrs32, 0x00000000, 0x80000000, 20); 
+TEST_R_OP( 6 , clrs32, 0x00000000, 0x8e269a7f, 24); 
+TEST_R_OP( 7 , clrs32, 0x00000000, 0x7d8a124d, 28); 
+TEST_R_OP( 8 , clrs32, 0x0000001f, 0xffffffff, 32); 
+TEST_R_OP( 9 , clrs32, 0x0000001f, 0x00000000, 36); 
+TEST_R_OP( 10 , clrs32, 0x0000001f, 0xffffffff, 40); 
+TEST_R_OP( 11 , clrs32, 0x00000000, 0x80000000, 44); 
+TEST_R_OP( 12 , clrs32, 0x0000001f, 0xffffffff, 48); 
+TEST_R_OP( 13 , clrs32, 0x0000001f, 0xffffffff, 52); 
+TEST_R_OP( 14 , clrs32, 0x00000005, 0x032c8e4e, 56); 
+TEST_R_OP( 15 , clrs32, 0x00000000, 0x80000000, 60); 
+TEST_R_OP( 16 , clrs32, 0x00000000, 0x80000000, 64); 
+TEST_R_OP( 17 , clrs32, 0x0000001f, 0x00000000, 68); 
+TEST_R_OP( 18 , clrs32, 0x0000001f, 0xffffffff, 72); 
+TEST_R_OP( 19 , clrs32, 0x0000001f, 0x00000000, 76); 
+TEST_R_OP( 20 , clrs32, 0x00000001, 0x329e280c, 80); 
+TEST_R_OP( 21 , clrs32, 0x00000003, 0x08fbbcac, 84); 
+TEST_R_OP( 22 , clrs32, 0x0000001f, 0xffffffff, 88); 
+TEST_R_OP( 23 , clrs32, 0x0000001f, 0x00000000, 92); 
+TEST_R_OP( 24 , clrs32, 0x00000000, 0x80000000, 96); 
+TEST_R_OP( 25 , clrs32, 0x0000001f, 0x00000000, 100); 
+TEST_R_OP( 26 , clrs32, 0x0000001f, 0x00000000, 104); 
+TEST_R_OP( 27 , clrs32, 0x0000001f, 0x00000000, 108); 
+TEST_R_OP( 28 , clrs32, 0x00000000, 0x6047b301, 112); 
+TEST_R_OP( 29 , clrs32, 0x0000001f, 0xffffffff, 116); 
+TEST_R_OP( 30 , clrs32, 0x00000000, 0x80000000, 120); 
+TEST_R_OP( 31 , clrs32, 0x00000001, 0x2532a21f, 124); 
+TEST_R_OP( 32 , clrs32, 0x0000001f, 0x00000000, 128); 
+TEST_R_OP( 33 , clrs32, 0x00000000, 0x6966d563, 132); 
+TEST_R_OP( 34 , clrs32, 0x00000000, 0x70bb9f0c, 136); 
+TEST_R_OP( 35 , clrs32, 0x00000000, 0x9cdc827c, 140); 
+TEST_R_OP( 36 , clrs32, 0x0000001f, 0x00000000, 144); 
+TEST_R_OP( 37 , clrs32, 0x00000000, 0x80000000, 148); 
+TEST_R_OP( 38 , clrs32, 0x0000001f, 0x00000000, 152); 
+TEST_R_OP( 39 , clrs32, 0x00000003, 0xf05ef51a, 156); 
+TEST_R_OP( 40 , clrs32, 0x0000001f, 0x00000000, 160); 
+TEST_R_OP( 41 , clrs32, 0x0000001f, 0x00000000, 164); 
+TEST_R_OP( 42 , clrs32, 0x00000000, 0x80000000, 168); 
+TEST_R_OP( 43 , clrs32, 0x0000001f, 0x00000000, 172); 
+TEST_R_OP( 44 , clrs32, 0x0000001f, 0xffffffff, 176); 
+TEST_R_OP( 45 , clrs32, 0x00000000, 0x81fd5ace, 180); 
+TEST_R_OP( 46 , clrs32, 0x00000000, 0x80000000, 184); 
+TEST_R_OP( 47 , clrs32, 0x00000001, 0xc46d30ca, 188); 
+TEST_R_OP( 48 , clrs32, 0x0000001f, 0x00000000, 192); 
+TEST_R_OP( 49 , clrs32, 0x0000001f, 0x00000000, 196); 
+TEST_R_OP( 50 , clrs32, 0x0000001f, 0xffffffff, 200); 
+TEST_R_OP( 51 , clrs32, 0x0000001f, 0xffffffff, 204); 
+TEST_R_OP( 52 , clrs32, 0x00000000, 0x80000000, 208); 
+TEST_R_OP( 53 , clrs32, 0x00000001, 0xd44c447c, 212); 
+TEST_R_OP( 54 , clrs32, 0x00000000, 0x69d4d0f4, 216); 
+TEST_R_OP( 55 , clrs32, 0x00000000, 0x80000000, 220); 
+TEST_R_OP( 56 , clrs32, 0x0000000b, 0x000e4bd2, 224); 
+TEST_R_OP( 57 , clrs32, 0x0000001f, 0xffffffff, 228); 
+TEST_R_OP( 58 , clrs32, 0x00000000, 0x80000000, 232); 
+TEST_R_OP( 59 , clrs32, 0x00000000, 0x80000000, 236); 
+TEST_R_OP( 60 , clrs32, 0x0000001f, 0xffffffff, 240); 
+TEST_R_OP( 61 , clrs32, 0x00000000, 0x80000000, 244); 
+TEST_R_OP( 62 , clrs32, 0x00000000, 0xa758b340, 248); 
+TEST_R_OP( 63 , clrs32, 0x00000000, 0x80000000, 252); 
+TEST_R_OP( 64 , clrs32, 0x0000001f, 0xffffffff, 256); 
+TEST_R_OP( 65 , clrs32, 0x0000001f, 0xffffffff, 260); 
+TEST_R_OP( 66 , clrs32, 0x0000001f, 0xffffffff, 264); 
+TEST_R_OP( 67 , clrs32, 0x00000000, 0x80000000, 268); 
+TEST_R_OP( 68 , clrs32, 0x00000001, 0x222abd36, 272); 
+TEST_R_OP( 69 , clrs32, 0x0000001f, 0x00000000, 276); 
+TEST_R_OP( 70 , clrs32, 0x00000000, 0x80000000, 280); 
+TEST_R_OP( 71 , clrs32, 0x00000000, 0x80000000, 284); 
+TEST_R_OP( 72 , clrs32, 0x00000000, 0x80000000, 288); 
+TEST_R_OP( 73 , clrs32, 0x0000001f, 0x00000000, 292); 
+TEST_R_OP( 74 , clrs32, 0x0000001f, 0xffffffff, 296); 
+TEST_R_OP( 75 , clrs32, 0x0000001f, 0xffffffff, 300); 
+TEST_R_OP( 76 , clrs32, 0x00000001, 0x3501ed2d, 304); 
+TEST_R_OP( 77 , clrs32, 0x00000009, 0xffdab91f, 308); 
+TEST_R_OP( 78 , clrs32, 0x00000000, 0x80000000, 312); 
+TEST_R_OP( 79 , clrs32, 0x00000001, 0xd82ed0a9, 316); 
+TEST_R_OP( 80 , clrs32, 0x0000001f, 0x00000000, 320); 
+TEST_R_OP( 81 , clrs32, 0x0000001f, 0xffffffff, 324); 
+TEST_R_OP( 82 , clrs32, 0x0000001f, 0x00000000, 328); 
+TEST_R_OP( 83 , clrs32, 0x0000001f, 0x00000000, 332); 
+TEST_R_OP( 84 , clrs32, 0x0000001f, 0x00000000, 336); 
+TEST_R_OP( 85 , clrs32, 0x0000001f, 0x00000000, 340); 
+TEST_R_OP( 86 , clrs32, 0x00000001, 0x282c97ca, 344); 
+TEST_R_OP( 87 , clrs32, 0x0000001f, 0x00000000, 348); 
+TEST_R_OP( 88 , clrs32, 0x00000000, 0x7998e0b3, 352); 
+TEST_R_OP( 89 , clrs32, 0x00000000, 0x80000000, 356); 
+TEST_R_OP( 90 , clrs32, 0x00000000, 0x9d05f504, 360); 
+TEST_R_OP( 91 , clrs32, 0x00000000, 0x80000000, 364); 
+TEST_R_OP( 92 , clrs32, 0x00000000, 0x6a73c648, 368); 
+TEST_R_OP( 93 , clrs32, 0x00000002, 0x12670ef0, 372); 
+TEST_R_OP( 94 , clrs32, 0x0000001f, 0xffffffff, 376); 
+TEST_R_OP( 95 , clrs32, 0x0000001f, 0xffffffff, 380); 
+TEST_R_OP( 96 , clrs32, 0x00000000, 0x80000000, 384); 
+TEST_R_OP( 97 , clrs32, 0x00000000, 0x80000000, 388); 
+TEST_R_OP( 98 , clrs32, 0x0000001f, 0xffffffff, 392); 
+TEST_R_OP( 99 , clrs32, 0x00000000, 0x80000000, 396); 
+TEST_R_OP( 100 , clrs32, 0x0000001f, 0xffffffff, 400); 
+TEST_R_OP( 101 , clrs32, 0x00000000, 0x8c8f802e, 404); 
+TEST_R_OP( 102 , clrs32, 0x0000001f, 0x00000000, 408); 
+TEST_R_OP( 103 , clrs32, 0x0000001f, 0x00000000, 412); 
+TEST_R_OP( 104 , clrs32, 0x00000000, 0xb7e18db6, 416); 
+TEST_R_OP( 105 , clrs32, 0x00000000, 0x4265cb60, 420); 
+TEST_R_OP( 106 , clrs32, 0x0000001f, 0x00000000, 424); 
+TEST_R_OP( 107 , clrs32, 0x0000001f, 0xffffffff, 428); 
+TEST_R_OP( 108 , clrs32, 0x00000000, 0x41b12256, 432); 
+TEST_R_OP( 109 , clrs32, 0x00000001, 0xcf459d85, 436); 
+TEST_R_OP( 110 , clrs32, 0x00000000, 0x97f2e455, 440); 
+TEST_R_OP( 111 , clrs32, 0x00000001, 0xc17ec43e, 444); 
+TEST_R_OP( 112 , clrs32, 0x00000000, 0x80000000, 448); 
+TEST_R_OP( 113 , clrs32, 0x00000002, 0x1660aa1c, 452); 
+TEST_R_OP( 114 , clrs32, 0x00000002, 0xe8c9c7d5, 456); 
+TEST_R_OP( 115 , clrs32, 0x00000000, 0x4674291f, 460); 
+TEST_R_OP( 116 , clrs32, 0x00000000, 0x5139f0fb, 464); 
+TEST_R_OP( 117 , clrs32, 0x00000000, 0x80000000, 468); 
+TEST_R_OP( 118 , clrs32, 0x00000000, 0xa9922785, 472); 
+TEST_R_OP( 119 , clrs32, 0x00000000, 0xb2558603, 476); 
+TEST_R_OP( 120 , clrs32, 0x0000001f, 0x00000000, 480); 
+TEST_R_OP( 121 , clrs32, 0x00000001, 0xd50f4ecb, 484); 
+TEST_R_OP( 122 , clrs32, 0x0000001f, 0xffffffff, 488); 
+TEST_R_OP( 123 , clrs32, 0x00000000, 0x80000000, 492); 
+TEST_R_OP( 124 , clrs32, 0x00000000, 0x80000000, 496); 
+TEST_R_OP( 125 , clrs32, 0x0000001f, 0x00000000, 500); 
+TEST_R_OP( 126 , clrs32, 0x00000003, 0x09350be4, 504); 
+TEST_R_OP( 127 , clrs32, 0x00000000, 0x80000000, 508); 
+TEST_R_OP( 128 , clrs32, 0x0000001f, 0x00000000, 512); 
+TEST_R_OP( 129 , clrs32, 0x0000001f, 0xffffffff, 516); 
+TEST_R_OP( 130 , clrs32, 0x00000001, 0x30ddb9ed, 520); 
+TEST_R_OP( 131 , clrs32, 0x00000000, 0x80000000, 524); 
+TEST_R_OP( 132 , clrs32, 0x00000001, 0x31d44d8a, 528); 
+TEST_R_OP( 133 , clrs32, 0x00000000, 0x80000000, 532); 
+TEST_R_OP( 134 , clrs32, 0x00000000, 0xa443d6d9, 536); 
+TEST_R_OP( 135 , clrs32, 0x00000000, 0x80000000, 540); 
+TEST_R_OP( 136 , clrs32, 0x0000001f, 0x00000000, 544); 
+TEST_R_OP( 137 , clrs32, 0x0000001f, 0x00000000, 548); 
+TEST_R_OP( 138 , clrs32, 0x00000001, 0x2bcbf074, 552); 
+TEST_R_OP( 139 , clrs32, 0x0000001f, 0xffffffff, 556); 
+TEST_R_OP( 140 , clrs32, 0x00000002, 0xea1d7043, 560); 
+TEST_R_OP( 141 , clrs32, 0x0000001f, 0x00000000, 564); 
+TEST_R_OP( 142 , clrs32, 0x0000001f, 0xffffffff, 568); 
+TEST_R_OP( 143 , clrs32, 0x0000001f, 0xffffffff, 572); 
+TEST_R_OP( 144 , clrs32, 0x0000001f, 0xffffffff, 576); 
+TEST_R_OP( 145 , clrs32, 0x0000001f, 0xffffffff, 580); 
+TEST_R_OP( 146 , clrs32, 0x0000001f, 0x00000000, 584); 
+TEST_R_OP( 147 , clrs32, 0x00000003, 0xf6da81b2, 588); 
+TEST_R_OP( 148 , clrs32, 0x00000000, 0x80000000, 592); 
+TEST_R_OP( 149 , clrs32, 0x0000001f, 0xffffffff, 596); 
+TEST_R_OP( 150 , clrs32, 0x0000001f, 0xffffffff, 600); 
+TEST_R_OP( 151 , clrs32, 0x0000001f, 0x00000000, 604); 
+TEST_R_OP( 152 , clrs32, 0x0000001f, 0x00000000, 608); 
+TEST_R_OP( 153 , clrs32, 0x0000001f, 0xffffffff, 612); 
+TEST_R_OP( 154 , clrs32, 0x0000001f, 0x00000000, 616); 
+TEST_R_OP( 155 , clrs32, 0x00000001, 0x35a4fc6a, 620); 
+TEST_R_OP( 156 , clrs32, 0x00000000, 0x80000000, 624); 
+TEST_R_OP( 157 , clrs32, 0x0000001f, 0x00000000, 628); 
+TEST_R_OP( 158 , clrs32, 0x0000001f, 0x00000000, 632); 
+TEST_R_OP( 159 , clrs32, 0x00000000, 0x80000000, 636); 
+TEST_R_OP( 160 , clrs32, 0x00000000, 0x80000000, 640); 
+TEST_R_OP( 161 , clrs32, 0x00000000, 0x80000000, 644); 
+TEST_R_OP( 162 , clrs32, 0x00000000, 0x86c22ed7, 648); 
+TEST_R_OP( 163 , clrs32, 0x0000001f, 0xffffffff, 652); 
+TEST_R_OP( 164 , clrs32, 0x00000002, 0x159f0b1b, 656); 
+TEST_R_OP( 165 , clrs32, 0x00000000, 0x80000000, 660); 
+TEST_R_OP( 166 , clrs32, 0x00000000, 0x80000000, 664); 
+TEST_R_OP( 167 , clrs32, 0x00000000, 0x80000000, 668); 
+TEST_R_OP( 168 , clrs32, 0x0000001f, 0x00000000, 672); 
+TEST_R_OP( 169 , clrs32, 0x0000001f, 0x00000000, 676); 
+TEST_R_OP( 170 , clrs32, 0x00000000, 0x80000000, 680); 
+TEST_R_OP( 171 , clrs32, 0x00000000, 0x80000000, 684); 
+TEST_R_OP( 172 , clrs32, 0x00000000, 0x80000000, 688); 
+TEST_R_OP( 173 , clrs32, 0x0000001f, 0x00000000, 692); 
+TEST_R_OP( 174 , clrs32, 0x0000001f, 0xffffffff, 696); 
+TEST_R_OP( 175 , clrs32, 0x00000000, 0x80000000, 700); 
+TEST_R_OP( 176 , clrs32, 0x00000000, 0x80000000, 704); 
+TEST_R_OP( 177 , clrs32, 0x00000000, 0x4501aa94, 708); 
+TEST_R_OP( 178 , clrs32, 0x00000000, 0x80000000, 712); 
+TEST_R_OP( 179 , clrs32, 0x0000001f, 0x00000000, 716); 
+TEST_R_OP( 180 , clrs32, 0x00000000, 0x73a3d29d, 720); 
+TEST_R_OP( 181 , clrs32, 0x0000001f, 0x00000000, 724); 
+TEST_R_OP( 182 , clrs32, 0x0000001f, 0xffffffff, 728); 
+TEST_R_OP( 183 , clrs32, 0x0000001f, 0xffffffff, 732); 
+TEST_R_OP( 184 , clrs32, 0x00000000, 0x80000000, 736); 
+TEST_R_OP( 185 , clrs32, 0x0000001f, 0xffffffff, 740); 
+TEST_R_OP( 186 , clrs32, 0x0000001f, 0x00000000, 744); 
+TEST_R_OP( 187 , clrs32, 0x0000001f, 0xffffffff, 748); 
+TEST_R_OP( 188 , clrs32, 0x00000000, 0x80000000, 752); 
+TEST_R_OP( 189 , clrs32, 0x00000002, 0x174b97c1, 756); 
+TEST_R_OP( 190 , clrs32, 0x0000001f, 0x00000000, 760); 
+TEST_R_OP( 191 , clrs32, 0x00000000, 0x80000000, 764); 
+TEST_R_OP( 192 , clrs32, 0x00000000, 0x80000000, 768); 
+TEST_R_OP( 193 , clrs32, 0x0000001f, 0x00000000, 772); 
+TEST_R_OP( 194 , clrs32, 0x00000000, 0x80000000, 776); 
+TEST_R_OP( 195 , clrs32, 0x0000001f, 0x00000000, 780); 
+TEST_R_OP( 196 , clrs32, 0x0000001f, 0xffffffff, 784); 
+TEST_R_OP( 197 , clrs32, 0x0000001f, 0xffffffff, 788); 
+TEST_R_OP( 198 , clrs32, 0x00000000, 0x80000000, 792); 
+TEST_R_OP( 199 , clrs32, 0x00000000, 0x8dde8337, 796); 
+
+  #-------------------------------------------------------------
+  # Bypassing tests
+  #-------------------------------------------------------------
+
+
+TEST_PASSFAIL
+
+RV_COMPLIANCE_CODE_END
+
+.data
+
+RV_COMPLIANCE_DATA_BEGIN
+test_res:
+    .fill 200, 4, -1
+RV_COMPLIANCE_DATA_END

@@ -1,0 +1,235 @@
+# See LICENSE for license details.
+#*****************************************************************************
+# umsr64.S
+#-----------------------------------------------------------------------------
+#
+# Test add instruction.
+#
+
+
+#include "riscv_test.h"
+#include "compliance_test.h"
+#include "compliance_io.h"
+#include "aw_test_macros.h"
+
+RVTEST_RV64U
+RV_COMPLIANCE_CODE_BEGIN
+
+  #-------------------------------------------------------------
+  # Arithmetic tests
+  #-------------------------------------------------------------
+
+TEST_RR_OP64_OO( 2 , umsr64, 0x8000000080000000, 0x80000000, 0xffffffff , 8); 
+TEST_RR_OP64_OO( 3 , umsr64, 0x8000000080000000, 0xfe02ba6b, 0x00000000 , 16); 
+TEST_RR_OP64_OO( 4 , umsr64, 0x4408c90e756798b0, 0x5ab9e4ae, 0xa9343098 , 24); 
+TEST_RR_OP64_OO( 5 , umsr64, 0xc308f696f6676b28, 0x80ffd278, 0xffffffff , 32); 
+TEST_RR_OP64_OO( 6 , umsr64, 0xb7ad8de7c397b07c, 0x0dbaf6bc, 0xd3c039c5 , 40); 
+TEST_RR_OP64_OO( 7 , umsr64, 0xb7ad8de9c397b07b, 0xffffffff, 0xffffffff , 48); 
+TEST_RR_OP64_OO( 8 , umsr64, 0x05df5d887565e0dd, 0xb1ce3062, 0xffffffff , 56); 
+TEST_RR_OP64_OO( 9 , umsr64, 0x85df5d88f565e0dd, 0xffffffff, 0x80000000 , 64); 
+TEST_RR_OP64_OO( 10 , umsr64, 0x0ac0e18ff565e0dd, 0xf63cf7f2, 0x80000000 , 72); 
+TEST_RR_OP64_OO( 11 , umsr64, 0x0ac0e18ff565e0dd, 0x00000000, 0x80000000 , 80); 
+TEST_RR_OP64_OO( 12 , umsr64, 0x8ac0e1907565e0dd, 0x80000000, 0xffffffff , 88); 
+TEST_RR_OP64_OO( 13 , umsr64, 0x8ac0e1907565e0dd, 0x00000000, 0xaef70a42 , 96); 
+TEST_RR_OP64_OO( 14 , umsr64, 0x0ac0e190f565e0dd, 0xffffffff, 0x80000000 , 104); 
+TEST_RR_OP64_OO( 15 , umsr64, 0x0ac0e190f565e0dd, 0x107af8ff, 0x00000000 , 112); 
+TEST_RR_OP64_OO( 16 , umsr64, 0x0ac0e190f565e0dd, 0x0cd62f02, 0x00000000 , 120); 
+TEST_RR_OP64_OO( 17 , umsr64, 0x9df28f747565e0dd, 0x80000000, 0xd99ca439 , 128); 
+TEST_RR_OP64_OO( 18 , umsr64, 0x9df28f747565e0dd, 0x00000000, 0x80000000 , 136); 
+TEST_RR_OP64_OO( 19 , umsr64, 0x1df28f74f565e0dd, 0x80000000, 0xffffffff , 144); 
+TEST_RR_OP64_OO( 20 , umsr64, 0x1df28f76f565e0dc, 0xffffffff, 0xffffffff , 152); 
+TEST_RR_OP64_OO( 21 , umsr64, 0x1df28f76f565e0dc, 0xffffffff, 0x00000000 , 160); 
+TEST_RR_OP64_OO( 22 , umsr64, 0x1df28f78f565e0db, 0xffffffff, 0xffffffff , 168); 
+TEST_RR_OP64_OO( 23 , umsr64, 0x1df28f78f565e0db, 0x80000000, 0x00000000 , 176); 
+TEST_RR_OP64_OO( 24 , umsr64, 0x1df28f78f565e0db, 0xffffffff, 0x00000000 , 184); 
+TEST_RR_OP64_OO( 25 , umsr64, 0x1df28f78f565e0db, 0x00000000, 0x00000000 , 192); 
+TEST_RR_OP64_OO( 26 , umsr64, 0xe66ca1c82cebce8c, 0x3785edb1, 0xffffffff , 200); 
+TEST_RR_OP64_OO( 27 , umsr64, 0xe66ca1c82cebce8c, 0x00000000, 0x80000000 , 208); 
+TEST_RR_OP64_OO( 28 , umsr64, 0x398f5cd1d9c91383, 0xffffffff, 0xacdd44f7 , 216); 
+TEST_RR_OP64_OO( 29 , umsr64, 0x90bae170829d8ee5, 0xa8d47b62, 0xffffffff , 224); 
+TEST_RR_OP64_OO( 30 , umsr64, 0x10bae171029d8ee5, 0xffffffff, 0x80000000 , 232); 
+TEST_RR_OP64_OO( 31 , umsr64, 0x10bae171029d8ee5, 0xcac77500, 0x00000000 , 240); 
+TEST_RR_OP64_OO( 32 , umsr64, 0x90bae171829d8ee5, 0x80000000, 0xffffffff , 248); 
+TEST_RR_OP64_OO( 33 , umsr64, 0x10bae172029d8ee5, 0xffffffff, 0x80000000 , 256); 
+TEST_RR_OP64_OO( 34 , umsr64, 0xd0bae172029d8ee5, 0x80000000, 0x80000000 , 264); 
+TEST_RR_OP64_OO( 35 , umsr64, 0x90bae172029d8ee5, 0x80000000, 0x80000000 , 272); 
+TEST_RR_OP64_OO( 36 , umsr64, 0x90bae172029d8ee5, 0x8c081514, 0x00000000 , 280); 
+TEST_RR_OP64_OO( 37 , umsr64, 0x90bae172029d8ee5, 0x80000000, 0x00000000 , 288); 
+TEST_RR_OP64_OO( 38 , umsr64, 0x79cb654e829d8ee5, 0x80000000, 0x2ddef847 , 296); 
+TEST_RR_OP64_OO( 39 , umsr64, 0x79cb654e829d8ee5, 0xffffffff, 0x00000000 , 304); 
+TEST_RR_OP64_OO( 40 , umsr64, 0x79cb654e829d8ee5, 0xffffffff, 0x00000000 , 312); 
+TEST_RR_OP64_OO( 41 , umsr64, 0xf9cb654f029d8ee5, 0xffffffff, 0x80000000 , 320); 
+TEST_RR_OP64_OO( 42 , umsr64, 0xa73aeb4c029d8ee5, 0x80000000, 0xa520f406 , 328); 
+TEST_RR_OP64_OO( 43 , umsr64, 0xa73aeb4c029d8ee5, 0x00000000, 0x00000000 , 336); 
+TEST_RR_OP64_OO( 44 , umsr64, 0xa73aeb4c029d8ee5, 0x00000000, 0xffffffff , 344); 
+TEST_RR_OP64_OO( 45 , umsr64, 0x273aeb4c829d8ee5, 0xffffffff, 0x80000000 , 352); 
+TEST_RR_OP64_OO( 46 , umsr64, 0x273aeb4e829d8ee4, 0xffffffff, 0xffffffff , 360); 
+TEST_RR_OP64_OO( 47 , umsr64, 0xa73aeb4f029d8ee4, 0xffffffff, 0x80000000 , 368); 
+TEST_RR_OP64_OO( 48 , umsr64, 0x74269234029d8ee4, 0x6628b236, 0x80000000 , 376); 
+TEST_RR_OP64_OO( 49 , umsr64, 0x74269234029d8ee4, 0x00000000, 0x00000000 , 384); 
+TEST_RR_OP64_OO( 50 , umsr64, 0x74269234029d8ee4, 0x80000000, 0x00000000 , 392); 
+TEST_RR_OP64_OO( 51 , umsr64, 0x34269234029d8ee4, 0x80000000, 0x80000000 , 400); 
+TEST_RR_OP64_OO( 52 , umsr64, 0xb22f0f3f849511d9, 0x81f782f5, 0xffffffff , 408); 
+TEST_RR_OP64_OO( 53 , umsr64, 0xb22f0f3f849511d9, 0x00000000, 0x00000000 , 416); 
+TEST_RR_OP64_OO( 54 , umsr64, 0xb22f0f41849511d8, 0xffffffff, 0xffffffff , 424); 
+TEST_RR_OP64_OO( 55 , umsr64, 0x722f0f41849511d8, 0x80000000, 0x80000000 , 432); 
+TEST_RR_OP64_OO( 56 , umsr64, 0xf22f0f42049511d8, 0xffffffff, 0x80000000 , 440); 
+TEST_RR_OP64_OO( 57 , umsr64, 0xf22f0f42049511d8, 0xb4e8eed9, 0x00000000 , 448); 
+TEST_RR_OP64_OO( 58 , umsr64, 0x6ce9a43689da7ce4, 0xffffffff, 0x85456b0c , 456); 
+TEST_RR_OP64_OO( 59 , umsr64, 0x6ce9a43889da7ce3, 0xffffffff, 0xffffffff , 464); 
+TEST_RR_OP64_OO( 60 , umsr64, 0x6ce9a43889da7ce3, 0x00000000, 0x00000000 , 472); 
+TEST_RR_OP64_OO( 61 , umsr64, 0xff0d9776f7b689a5, 0xffffffff, 0x6ddc0cc2 , 480); 
+TEST_RR_OP64_OO( 62 , umsr64, 0x915f46cbf7b689a5, 0x80000000, 0xdb5ca156 , 488); 
+TEST_RR_OP64_OO( 63 , umsr64, 0x915f46cbf7b689a5, 0x00000000, 0x80000000 , 496); 
+TEST_RR_OP64_OO( 64 , umsr64, 0x7ded2f0e0b28a163, 0x137217be, 0xffffffff , 504); 
+TEST_RR_OP64_OO( 65 , umsr64, 0x7ded2f0e0b28a163, 0x00000000, 0x00000000 , 512); 
+TEST_RR_OP64_OO( 66 , umsr64, 0x7ded2f100b28a162, 0xffffffff, 0xffffffff , 520); 
+TEST_RR_OP64_OO( 67 , umsr64, 0x7ded2f100b28a162, 0xffffffff, 0x00000000 , 528); 
+TEST_RR_OP64_OO( 68 , umsr64, 0x6671ffa60b28a162, 0x80000000, 0x2ef65ed4 , 536); 
+TEST_RR_OP64_OO( 69 , umsr64, 0x2d4f3585444b6b83, 0x3922ca21, 0xffffffff , 544); 
+TEST_RR_OP64_OO( 70 , umsr64, 0x2d4f3585444b6b83, 0xffffffff, 0x00000000 , 552); 
+TEST_RR_OP64_OO( 71 , umsr64, 0xe167c411c44b6b83, 0x80000000, 0x97cee2e7 , 560); 
+TEST_RR_OP64_OO( 72 , umsr64, 0xe167c411c44b6b83, 0x00000000, 0x993a8523 , 568); 
+TEST_RR_OP64_OO( 73 , umsr64, 0xe167c411c44b6b83, 0x00000000, 0xffffffff , 576); 
+TEST_RR_OP64_OO( 74 , umsr64, 0xe167c411c44b6b83, 0x80000000, 0x00000000 , 584); 
+TEST_RR_OP64_OO( 75 , umsr64, 0xba6478bc1bb727f5, 0x90deb866, 0x44f0901d , 592); 
+TEST_RR_OP64_OO( 76 , umsr64, 0xba6478bc1bb727f5, 0x80000000, 0x00000000 , 600); 
+TEST_RR_OP64_OO( 77 , umsr64, 0xba6478bc1bb727f5, 0x00000000, 0x80000000 , 608); 
+TEST_RR_OP64_OO( 78 , umsr64, 0xba6478bc1bb727f5, 0x00000000, 0xeeceffd5 , 616); 
+TEST_RR_OP64_OO( 79 , umsr64, 0x8c0f18d29bb727f5, 0x80000000, 0x5caabfd3 , 624); 
+TEST_RR_OP64_OO( 80 , umsr64, 0x87d656439fefea84, 0x0438c28f, 0xffffffff , 632); 
+TEST_RR_OP64_OO( 81 , umsr64, 0x27ebc1d6ffda7ef1, 0xffffffff, 0x5fea946d , 640); 
+TEST_RR_OP64_OO( 82 , umsr64, 0x27ebc1d6ffda7ef1, 0xeed2d2a1, 0x00000000 , 648); 
+TEST_RR_OP64_OO( 83 , umsr64, 0xf2f482337fda7ef1, 0x69ee7f47, 0x80000000 , 656); 
+TEST_RR_OP64_OO( 84 , umsr64, 0xbbf5dfc7ffda7ef1, 0x80000000, 0x6dfd44d7 , 664); 
+TEST_RR_OP64_OO( 85 , umsr64, 0x861b84ed7fda7ef1, 0x80000000, 0x6bb4b5b5 , 672); 
+TEST_RR_OP64_OO( 86 , umsr64, 0x861b84ed7fda7ef1, 0x00000000, 0x00000000 , 680); 
+TEST_RR_OP64_OO( 87 , umsr64, 0x7ae8ff7217530ac8, 0x0e23e2cb, 0xcab8c25b , 688); 
+TEST_RR_OP64_OO( 88 , umsr64, 0x7ae8ff7217530ac8, 0x00000000, 0x00000000 , 696); 
+TEST_RR_OP64_OO( 89 , umsr64, 0xfae8ff7297530ac8, 0xffffffff, 0x80000000 , 704); 
+TEST_RR_OP64_OO( 90 , umsr64, 0xd38f335cbeacd6de, 0xffffffff, 0x2759cc16 , 712); 
+TEST_RR_OP64_OO( 91 , umsr64, 0x85f5384b0c46d1f0, 0x4d99fb12, 0xffffffff , 720); 
+TEST_RR_OP64_OO( 92 , umsr64, 0x85f5384b0c46d1f0, 0x80000000, 0x00000000 , 728); 
+TEST_RR_OP64_OO( 93 , umsr64, 0x75a3f48a8c46d1f0, 0x20a28781, 0x80000000 , 736); 
+TEST_RR_OP64_OO( 94 , umsr64, 0x396791df37b64b04, 0x6de6a01e, 0x8c4fcf2a , 744); 
+TEST_RR_OP64_OO( 95 , umsr64, 0x396791df37b64b04, 0x00000000, 0xffffffff , 752); 
+TEST_RR_OP64_OO( 96 , umsr64, 0x396791df37b64b04, 0x80000000, 0x00000000 , 760); 
+TEST_RR_OP64_OO( 97 , umsr64, 0xb96791dfb7b64b04, 0x80000000, 0xffffffff , 768); 
+TEST_RR_OP64_OO( 98 , umsr64, 0xb96791dfb7b64b04, 0x00000000, 0x80000000 , 776); 
+TEST_RR_OP64_OO( 99 , umsr64, 0xb96791e1b7b64b03, 0xffffffff, 0xffffffff , 784); 
+TEST_RR_OP64_OO( 100 , umsr64, 0xb96791e1b7b64b03, 0x00000000, 0x00000000 , 792); 
+TEST_RR_OP64_OO( 101 , umsr64, 0x8c207f1fb7b64b03, 0x80000000, 0x5a8e2584 , 800); 
+TEST_RR_OP64_OO( 102 , umsr64, 0x8c207f1fb7b64b03, 0x00000000, 0x00000000 , 808); 
+TEST_RR_OP64_OO( 103 , umsr64, 0x8c207f1fb7b64b03, 0x00000000, 0x00000000 , 816); 
+TEST_RR_OP64_OO( 104 , umsr64, 0xc9b4ec777a21ddac, 0xffffffff, 0xc26b92a9 , 824); 
+TEST_RR_OP64_OO( 105 , umsr64, 0xc9b4ec777a21ddac, 0x00000000, 0x80000000 , 832); 
+TEST_RR_OP64_OO( 106 , umsr64, 0x89b4ec777a21ddac, 0x80000000, 0x80000000 , 840); 
+TEST_RR_OP64_OO( 107 , umsr64, 0xfba44a1208328012, 0x8e10a266, 0xffffffff , 848); 
+TEST_RR_OP64_OO( 108 , umsr64, 0xfba44a1208328012, 0x00000000, 0xffffffff , 856); 
+TEST_RR_OP64_OO( 109 , umsr64, 0xfba44a1208328012, 0x80000000, 0x00000000 , 864); 
+TEST_RR_OP64_OO( 110 , umsr64, 0xfba44a1208328012, 0x00000000, 0xffffffff , 872); 
+TEST_RR_OP64_OO( 111 , umsr64, 0xfba44a1208328012, 0x80000000, 0x00000000 , 880); 
+TEST_RR_OP64_OO( 112 , umsr64, 0xfba44a1208328012, 0x00000000, 0x0b433458 , 888); 
+TEST_RR_OP64_OO( 113 , umsr64, 0xdcf8734c26de56d8, 0xffffffff, 0x1eabd6c6 , 896); 
+TEST_RR_OP64_OO( 114 , umsr64, 0xdcf8734c26de56d8, 0x00000000, 0x988fcddc , 904); 
+TEST_RR_OP64_OO( 115 , umsr64, 0xa6f5981426de56d8, 0x6c05b670, 0x80000000 , 912); 
+TEST_RR_OP64_OO( 116 , umsr64, 0xa6f5981426de56d8, 0x00000000, 0x80000000 , 920); 
+TEST_RR_OP64_OO( 117 , umsr64, 0x26f59814a6de56d8, 0x80000000, 0xffffffff , 928); 
+TEST_RR_OP64_OO( 118 , umsr64, 0x26f59814a6de56d8, 0x00000000, 0xffffffff , 936); 
+TEST_RR_OP64_OO( 119 , umsr64, 0x008d46bd335b2b7d, 0x36179ee9, 0xb5c4f5a3 , 944); 
+TEST_RR_OP64_OO( 120 , umsr64, 0x008d46bd335b2b7d, 0x00000000, 0x00000000 , 952); 
+TEST_RR_OP64_OO( 121 , umsr64, 0x008d46bd335b2b7d, 0x00000000, 0x00000000 , 960); 
+TEST_RR_OP64_OO( 122 , umsr64, 0xf545140b335b2b7d, 0x16906564, 0x80000000 , 968); 
+TEST_RR_OP64_OO( 123 , umsr64, 0xf545140b335b2b7d, 0xffffffff, 0x00000000 , 976); 
+TEST_RR_OP64_OO( 124 , umsr64, 0xdb7527ea4d2b179e, 0x19cfec21, 0xffffffff , 984); 
+TEST_RR_OP64_OO( 125 , umsr64, 0x758aa96bcd2b179e, 0x80000000, 0xcbd4fcfd , 992); 
+TEST_RR_OP64_OO( 126 , umsr64, 0x49fb0118f8babff1, 0xffffffff, 0x2b8fa853 , 1000); 
+TEST_RR_OP64_OO( 127 , umsr64, 0x23701963f8babff1, 0x4d15cf6a, 0x80000000 , 1008); 
+TEST_RR_OP64_OO( 128 , umsr64, 0xe996c01d0630005e, 0x83dd36b7, 0x704ec205 , 1016); 
+TEST_RR_OP64_OO( 129 , umsr64, 0xe996c01f0630005d, 0xffffffff, 0xffffffff , 1024); 
+TEST_RR_OP64_OO( 130 , umsr64, 0xe996c01f0630005d, 0x0c348ef1, 0x00000000 , 1032); 
+TEST_RR_OP64_OO( 131 , umsr64, 0x7f7794ce0630005d, 0x80000000, 0xd43e56a2 , 1040); 
+TEST_RR_OP64_OO( 132 , umsr64, 0x6b31ec3d8630005d, 0x288b5121, 0x80000000 , 1048); 
+TEST_RR_OP64_OO( 133 , umsr64, 0xf56da41c6bc7665d, 0xa708a058, 0xb47e01c0 , 1056); 
+TEST_RR_OP64_OO( 134 , umsr64, 0x84d56d03dc5f9d76, 0x70983719, 0xffffffff , 1064); 
+TEST_RR_OP64_OO( 135 , umsr64, 0x13f0ce48dc5f9d76, 0x80000000, 0xe1c93d76 , 1072); 
+TEST_RR_OP64_OO( 136 , umsr64, 0x13f0ce48dc5f9d76, 0x69e810e8, 0x00000000 , 1080); 
+TEST_RR_OP64_OO( 137 , umsr64, 0xd3f0ce48dc5f9d76, 0x80000000, 0x80000000 , 1088); 
+TEST_RR_OP64_OO( 138 , umsr64, 0x53f0ce495c5f9d76, 0xffffffff, 0x80000000 , 1096); 
+TEST_RR_OP64_OO( 139 , umsr64, 0x53f0ce495c5f9d76, 0x80000000, 0x00000000 , 1104); 
+TEST_RR_OP64_OO( 140 , umsr64, 0x53f0ce495c5f9d76, 0x00000000, 0xc823a358 , 1112); 
+TEST_RR_OP64_OO( 141 , umsr64, 0x13f0ce495c5f9d76, 0x80000000, 0x80000000 , 1120); 
+TEST_RR_OP64_OO( 142 , umsr64, 0x13f0ce495c5f9d76, 0x00000000, 0xe5ca2626 , 1128); 
+TEST_RR_OP64_OO( 143 , umsr64, 0xaf28b523dc5f9d76, 0x80000000, 0xc990324b , 1136); 
+TEST_RR_OP64_OO( 144 , umsr64, 0xaf28b525dc5f9d75, 0xffffffff, 0xffffffff , 1144); 
+TEST_RR_OP64_OO( 145 , umsr64, 0xff9280b88bf5d1e3, 0xaf96346e, 0xffffffff , 1152); 
+TEST_RR_OP64_OO( 146 , umsr64, 0x04d07b0186b7d79b, 0xffffffff, 0xfac205b8 , 1160); 
+TEST_RR_OP64_OO( 147 , umsr64, 0x04d07b0186b7d79b, 0x00000000, 0x00000000 , 1168); 
+TEST_RR_OP64_OO( 148 , umsr64, 0x84d07b0206b7d79b, 0x80000000, 0xffffffff , 1176); 
+TEST_RR_OP64_OO( 149 , umsr64, 0x84d07b0206b7d79b, 0x00000000, 0x3e79622e , 1184); 
+TEST_RR_OP64_OO( 150 , umsr64, 0xdac69843b0c1ba5a, 0xffffffff, 0xaa09e2bf , 1192); 
+TEST_RR_OP64_OO( 151 , umsr64, 0x99c22a6e30c1ba5a, 0x8208dbab, 0x80000000 , 1200); 
+TEST_RR_OP64_OO( 152 , umsr64, 0x19c22a6eb0c1ba5a, 0xffffffff, 0x80000000 , 1208); 
+TEST_RR_OP64_OO( 153 , umsr64, 0x99c22a6f30c1ba5a, 0xffffffff, 0x80000000 , 1216); 
+TEST_RR_OP64_OO( 154 , umsr64, 0x60add15d30c1ba5a, 0x80000000, 0x7228b224 , 1224); 
+TEST_RR_OP64_OO( 155 , umsr64, 0x60add15d30c1ba5a, 0xffffffff, 0x00000000 , 1232); 
+TEST_RR_OP64_OO( 156 , umsr64, 0xe0add15db0c1ba5a, 0xffffffff, 0x80000000 , 1240); 
+TEST_RR_OP64_OO( 157 , umsr64, 0xe0add15db0c1ba5a, 0x00000000, 0xffffffff , 1248); 
+TEST_RR_OP64_OO( 158 , umsr64, 0x7b91639415de2824, 0x651c6dca, 0xffffffff , 1256); 
+TEST_RR_OP64_OO( 159 , umsr64, 0x7b91639415de2824, 0x00000000, 0xa3027a0e , 1264); 
+TEST_RR_OP64_OO( 160 , umsr64, 0x7b91639615de2823, 0xffffffff, 0xffffffff , 1272); 
+TEST_RR_OP64_OO( 161 , umsr64, 0x7b91639815de2822, 0xffffffff, 0xffffffff , 1280); 
+TEST_RR_OP64_OO( 162 , umsr64, 0x7b91639815de2822, 0x00000000, 0x80000000 , 1288); 
+TEST_RR_OP64_OO( 163 , umsr64, 0xfb91639895de2822, 0xffffffff, 0x80000000 , 1296); 
+TEST_RR_OP64_OO( 164 , umsr64, 0xe9f8a48c95de2822, 0x23317e18, 0x80000000 , 1304); 
+TEST_RR_OP64_OO( 165 , umsr64, 0xb8096efc5fd00732, 0x49cf46eb, 0xad3106d0 , 1312); 
+TEST_RR_OP64_OO( 166 , umsr64, 0xb8096efc5fd00732, 0x00000000, 0xffffffff , 1320); 
+TEST_RR_OP64_OO( 167 , umsr64, 0xb8096efc5fd00732, 0x00000000, 0x00000000 , 1328); 
+TEST_RR_OP64_OO( 168 , umsr64, 0xb8096efc5fd00732, 0x80000000, 0x00000000 , 1336); 
+TEST_RR_OP64_OO( 169 , umsr64, 0x8356967362368728, 0x729afdf2, 0x75b7306d , 1344); 
+TEST_RR_OP64_OO( 170 , umsr64, 0xb098d8fe34f4449e, 0xd2bdbd76, 0xffffffff , 1352); 
+TEST_RR_OP64_OO( 171 , umsr64, 0xa403e32e2e58b0f6, 0x1db1d654, 0x6c7822c2 , 1360); 
+TEST_RR_OP64_OO( 172 , umsr64, 0x593d0755ae58b0f6, 0x80000000, 0x958db7b1 , 1368); 
+TEST_RR_OP64_OO( 173 , umsr64, 0xd93d07562e58b0f6, 0xffffffff, 0x80000000 , 1376); 
+TEST_RR_OP64_OO( 174 , umsr64, 0xd93d07582e58b0f5, 0xffffffff, 0xffffffff , 1384); 
+TEST_RR_OP64_OO( 175 , umsr64, 0xd93d07582e58b0f5, 0x00000000, 0xffffffff , 1392); 
+TEST_RR_OP64_OO( 176 , umsr64, 0xd93d07582e58b0f5, 0xffffffff, 0x00000000 , 1400); 
+TEST_RR_OP64_OO( 177 , umsr64, 0xac6ed286cec88ed7, 0x375041fe, 0xcf5dfff1 , 1408); 
+TEST_RR_OP64_OO( 178 , umsr64, 0x2598f79e559e69c0, 0xffffffff, 0x86d5dae9 , 1416); 
+TEST_RR_OP64_OO( 179 , umsr64, 0xa598f79ed59e69c0, 0x80000000, 0xffffffff , 1424); 
+TEST_RR_OP64_OO( 180 , umsr64, 0xa598f7a0d59e69bf, 0xffffffff, 0xffffffff , 1432); 
+TEST_RR_OP64_OO( 181 , umsr64, 0x9f1dd189a70bcf3f, 0xe3b18010, 0x074969a8 , 1440); 
+TEST_RR_OP64_OO( 182 , umsr64, 0x9f1dd189a70bcf3f, 0x80000000, 0x00000000 , 1448); 
+TEST_RR_OP64_OO( 183 , umsr64, 0x1f1dd18a270bcf3f, 0xffffffff, 0x80000000 , 1456); 
+TEST_RR_OP64_OO( 184 , umsr64, 0x1f1dd18a270bcf3f, 0x00000000, 0x00000000 , 1464); 
+TEST_RR_OP64_OO( 185 , umsr64, 0x1f1dd18a270bcf3f, 0xffffffff, 0x00000000 , 1472); 
+TEST_RR_OP64_OO( 186 , umsr64, 0xdf1dd18a270bcf3f, 0x80000000, 0x80000000 , 1480); 
+TEST_RR_OP64_OO( 187 , umsr64, 0xdf1dd18a270bcf3f, 0x80000000, 0x00000000 , 1488); 
+TEST_RR_OP64_OO( 188 , umsr64, 0x9698a93eafd125e2, 0x564c0aa1, 0xd721813d , 1496); 
+TEST_RR_OP64_OO( 189 , umsr64, 0x1698a93f2fd125e2, 0xffffffff, 0x80000000 , 1504); 
+TEST_RR_OP64_OO( 190 , umsr64, 0x1698a93f2fd125e2, 0xe0fb3ad6, 0x00000000 , 1512); 
+TEST_RR_OP64_OO( 191 , umsr64, 0xac4892c5afd125e2, 0x80000000, 0xd4a02cf3 , 1520); 
+TEST_RR_OP64_OO( 192 , umsr64, 0xa641fdffafd125e2, 0x80000000, 0x0c0d298c , 1528); 
+TEST_RR_OP64_OO( 193 , umsr64, 0x7b143b8e2fd125e2, 0x565b84e3, 0x80000000 , 1536); 
+TEST_RR_OP64_OO( 194 , umsr64, 0x3b143b8e2fd125e2, 0x80000000, 0x80000000 , 1544); 
+TEST_RR_OP64_OO( 195 , umsr64, 0xbb143b8eafd125e2, 0xffffffff, 0x80000000 , 1552); 
+TEST_RR_OP64_OO( 196 , umsr64, 0xbb143b90afd125e1, 0xffffffff, 0xffffffff , 1560); 
+TEST_RR_OP64_OO( 197 , umsr64, 0xbb143b90afd125e1, 0x00000000, 0x717b04b5 , 1568); 
+TEST_RR_OP64_OO( 198 , umsr64, 0xbb143b90afd125e1, 0x00000000, 0xffffffff , 1576); 
+TEST_RR_OP64_OO( 199 , umsr64, 0x6af6ee0fafd125e1, 0xa03a9b02, 0x80000000 , 1584); 
+
+  #-------------------------------------------------------------
+  # Bypassing tests
+  #-------------------------------------------------------------
+
+
+TEST_PASSFAIL
+
+RV_COMPLIANCE_CODE_END
+
+.data
+
+RV_COMPLIANCE_DATA_BEGIN
+test_res:
+    .fill 398, 4, -1
+RV_COMPLIANCE_DATA_END

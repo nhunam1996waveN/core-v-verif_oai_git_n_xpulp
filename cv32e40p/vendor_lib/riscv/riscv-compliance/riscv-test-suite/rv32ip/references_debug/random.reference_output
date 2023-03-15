@@ -1,0 +1,220 @@
+ffffffff
+ffffffff
+ffffffff test_num: 2 , sra.u
+0cc46344 test_num: 3 , smmwt.u
+40000000 test_num: 4 , smmul
+40000000 test_num: 5 , kmaxds
+80000080 test_num: 6 , ksll8
+00000001 test_num: 7 , 
+00000001 test_num: 8 , 
+00000000 test_num: 9 , 
+00000000 test_num: 10 , bitrev
+00010000 test_num: 11 , kdmtt
+90957fff test_num: 12 , ukcras16
+90957fff test_num: 13 , kmmawb2.u
+9094bbbd test_num: 14 , smaldrs
+00000000 test_num: 14 , smaldrs
+0000867d test_num: 15 , kmxda
+00ff00ff test_num: 16 , ucmplt8
+00800056 test_num: 17 , zunpkd830
+007f8258 test_num: 18 , kdmabb
+7fffffff test_num: 19 , ksllw
+00000001 test_num: 20 , 
+00000001 test_num: 21 , 
+00000000 test_num: 22 , 
+7fffffff test_num: 23 , ursubw
+0000ffff test_num: 24 , scmplt16
+fcfcfc00 test_num: 25 , kslli8
+00000000 test_num: 26 , ursub64
+80000000 test_num: 26 , ursub64
+0000ffff test_num: 27 , srl16.u
+31b8ddd9 test_num: 28 , add64
+cfa7c712 test_num: 28 , add64
+00000001 test_num: 29 , kabsw
+0003f805 test_num: 30 , umaqa
+7fffffff test_num: 31 , kmmawt2
+00000001 test_num: 32 , 
+00000001 test_num: 33 , 
+00000000 test_num: 34 , 
+c0000000 test_num: 35 , smaldrs
+ffffffff test_num: 35 , smaldrs
+00000000 test_num: 36 , kmda
+fffffff0 test_num: 37 , ksllw
+0000ffff test_num: 38 , urcrsa16
+fffff4da test_num: 39 , ksubh
+fffff4fa test_num: 40 , insb
+00000000 test_num: 41 , srai16
+7f000176 test_num: 42 , kabs8
+00000001 test_num: 43 , 
+00000001 test_num: 44 , 
+00000000 test_num: 45 , 
+3fffffff test_num: 46 , ursubw
+3fffffff test_num: 47 , insb
+0000ff00 test_num: 48 , cmpeq8
+701b007f test_num: 49 , uradd8
+fffe7fff test_num: 50 , kcras16
+00000000 test_num: 51 , rsubw
+c372ffff test_num: 52 , pkbt16
+00000000 test_num: 53 , smbt16
+ff808080 test_num: 54 , ksll8
+ff808080 test_num: 55 , kmmac
+3ea30000 test_num: 56 , add16
+000000ff test_num: 57 , zunpkd832
+cdf9a0b8 test_num: 58 , ursubw
+00000000 test_num: 59 , uksubw
+00000001 test_num: 60 , 
+00000001 test_num: 61 , 
+00000000 test_num: 62 , 
+00000000 test_num: 63 , smaltt
+00000000 test_num: 63 , smaltt
+00000000 test_num: 64 , cmix
+ffff8000 test_num: 65 , sra16
+1102ffff test_num: 66 , radd16
+ffff0000 test_num: 67 , ukstas16
+00000001 test_num: 68 , 
+00000001 test_num: 69 , 
+00000000 test_num: 70 , 
+00000000 test_num: 71 , kmmawt.u
+00000000 test_num: 72 , smulx16
+00000000 test_num: 72 , smulx16
+00000000 test_num: 73 , smtt16
+0000001f test_num: 74 , clrs32
+ffffffff test_num: 75 , max
+80ff7cff test_num: 76 , srl8
+00000000 test_num: 77 , rsub64
+c0000000 test_num: 77 , rsub64
+0000419e test_num: 78 , uksub16
+00000001 test_num: 79 , 
+00000001 test_num: 80 , 
+00000000 test_num: 81 , 
+00000000 test_num: 82 , bitrev
+026c3630 test_num: 83 , khmx16
+0000001f test_num: 84 , clrs32
+0000001f test_num: 85 , insb
+3dff0000 test_num: 86 , sclip8
+00000076 test_num: 87 , sra8.u
+ff80ff80 test_num: 88 , kslra8.u
+00000177 test_num: 89 , pbsad
+8000ffff test_num: 90 , swap16
+73368cc9 test_num: 91 , umulx16
+00000000 test_num: 91 , umulx16
+80000000 test_num: 92 , uraddw
+ffff8000 test_num: 93 , ukstas16
+00000001 test_num: 94 , 
+00000001 test_num: 95 , 
+00000000 test_num: 96 , 
+00000000 test_num: 97 , kmxda
+0000ffff test_num: 98 , ukstsa16
+00000001 test_num: 99 , 
+00000001 test_num: 100 , 
+00000000 test_num: 101 , 
+362f565c test_num: 102 , uraddw
+c0000000 test_num: 103 , ave
+ffff8000 test_num: 104 , smin16
+00000001 test_num: 105 , clz32
+00000001 test_num: 106 , smalbt
+00000000 test_num: 106 , smalbt
+00000001 test_num: 107 , kmada
+00000001 test_num: 108 , kmmac.u
+ffff8000 test_num: 109 , kslra16.u
+80ffb662 test_num: 110 , ukadd8
+00000001 test_num: 111 , 
+00000001 test_num: 112 , 
+00000000 test_num: 113 , 
+7f004033 test_num: 114 , ursub8
+00000000 test_num: 115 , kdmbt
+80000000 test_num: 116 , kaddw
+80000000 test_num: 117 , insb
+0adc0000 test_num: 118 , ksll16
+0adc0000 test_num: 119 , kmmawt2.u
+00000000 test_num: 120 , uclip16
+00000001 test_num: 121 , 
+00000001 test_num: 122 , 
+00000000 test_num: 123 , 
+000000bf test_num: 124 , pbsada
+00007fff test_num: 125 , stsa16
+80017572 test_num: 126 , sub16
+00000000 test_num: 127 , ursubw
+00000000 test_num: 128 , smalxds
+00000000 test_num: 128 , smalxds
+7fffffff test_num: 129 , kdmabt
+7fffffff test_num: 130 , kmmawb.u
+00000000 test_num: 131 , ursub64
+80000000 test_num: 131 , ursub64
+ffff01f9 test_num: 132 , swap16
+00000000 test_num: 133 , umin16
+000a1701 test_num: 134 , srli8
+ffff7fff test_num: 135 , stsa16
+7fffffff test_num: 136 , ksubw
+00000001 test_num: 137 , 
+00000001 test_num: 138 , 
+00000000 test_num: 139 , 
+00000d97 test_num: 140 , smslxda
+00000000 test_num: 140 , smslxda
+00008c1b test_num: 141 , kmmwt2
+00008c1b test_num: 142 , umsr64
+00000000 test_num: 142 , umsr64
+ffffffff test_num: 143 , sclip16
+eafb8fd8 test_num: 144 , ursub64
+91f070d5 test_num: 144 , ursub64
+eafb8fd8 test_num: 145 , kmmawt.u
+4b56147d test_num: 146 , maddr32
+26970a43 test_num: 147 , cmix
+fff88000 test_num: 148 , kslli16
+00000001 test_num: 149 , 
+00000001 test_num: 150 , 
+00000000 test_num: 151 , 
+00000000 test_num: 152 , smsr64
+00000000 test_num: 152 , smsr64
+ffffffff test_num: 153 , ukaddw
+00000001 test_num: 154 , 
+00000001 test_num: 155 , 
+00000000 test_num: 156 , 
+ffff0000 test_num: 157 , pack
+00000000 test_num: 158 , uksub16
+00000001 test_num: 159 , 
+00000001 test_num: 160 , 
+00000000 test_num: 161 , 
+fffe0001 test_num: 162 , umulx16
+00000000 test_num: 162 , umulx16
+fffe0001 test_num: 163 , umaqa
+fffe0001 test_num: 164 , kmmac
+00000000 test_num: 165 , uraddw
+ffffffff test_num: 166 , ukaddw
+7fffffff test_num: 167 , kcrsa16
+00000001 test_num: 168 , 
+00000001 test_num: 169 , 
+00000000 test_num: 170 , 
+f04e7de9 test_num: 171 , kmmsb.u
+0000ff80 test_num: 172 , sunpkd832
+00017f80 test_num: 173 , kmmawt
+7fffffff test_num: 174 , kslliw
+00000001 test_num: 175 , 
+00000001 test_num: 176 , 
+00000000 test_num: 177 , 
+00000000 test_num: 178 , fsri
+02030004 test_num: 179 , srli8.u
+00000000 test_num: 180 , kmmwb2.u
+00000000 test_num: 181 , smulx16
+00000000 test_num: 181 , smulx16
+0a3f3fc0 test_num: 182 , rsub8
+7fffffff test_num: 183 , kwmmul
+00000001 test_num: 184 , 
+00000001 test_num: 185 , 
+00000000 test_num: 186 , 
+40d39088 test_num: 187 , rstsa16
+7fff8000 test_num: 188 , kslli16
+00000001 test_num: 189 , 
+00000001 test_num: 190 , 
+00000000 test_num: 191 , 
+00ff0000 test_num: 192 , scmplt8
+ffffffff test_num: 193 , pktb16
+000ff0ff test_num: 194 , sclip8
+00000001 test_num: 195 , 
+00000001 test_num: 196 , 
+00000000 test_num: 197 , 
+80008000 test_num: 198 , smin16
+80008000 test_num: 199 , smalxds
+00000000 test_num: 199 , smalxds
+00000000
+00000000

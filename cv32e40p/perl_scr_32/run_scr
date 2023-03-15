@@ -1,0 +1,17 @@
+#!bin/bash
+perl isa_gen_rv64.pl $@ > isa_gen_rv64.log
+perl isa_gen_src.pl  $@ > isa_gen_src.log
+perl run_isa.pl      $@ > run_isa.log
+grep -q "error" isa_gen_rv64.log isa_gen_src.log run_isa.log && echo "FAILLLLLLLL! Please check log (isa_gen_rv64.log, isa_gen_src.log, run_isa.log)" || echo "DONE! Gen isa completed."
+
+#cp -r rv64ip/*                      ~/WORKSPACE/cv32e40p_verif/core-v-verif_oai_git/cv32e40p/vendor_lib/riscv/riscv-compliance/riscv-test-suite/rv32ip/rv64ip/
+#cp -r src/*                         ~/WORKSPACE/cv32e40p_verif/core-v-verif_oai_git/cv32e40p/vendor_lib/riscv/riscv-compliance/riscv-test-suite/rv32ip/src/
+#cp -r references/*                  ~/WORKSPACE/cv32e40p_verif/core-v-verif_oai_git/cv32e40p/vendor_lib/riscv/riscv-compliance/riscv-test-suite/rv32ip/references/
+#cp -r isa_gen/run_compliance_p.sh   ~/WORKSPACE/cv32e40p_verif/core-v-verif_oai_git/bin/run_compliance_p.sh
+
+cp -r rv64ip/*                      ../..//cv32e40p/vendor_lib/riscv/riscv-compliance/riscv-test-suite/rv32ip/rv64ip/
+cp -r src/*                         ../..//cv32e40p/vendor_lib/riscv/riscv-compliance/riscv-test-suite/rv32ip/src/
+cp -r references/*                  ../..//cv32e40p/vendor_lib/riscv/riscv-compliance/riscv-test-suite/rv32ip/references/
+cp -r references_debug              ../..//cv32e40p/vendor_lib/riscv/riscv-compliance/riscv-test-suite/rv32ip/
+cp -r isa_gen/run_compliance_p.sh   ../..//bin/run_compliance_p.sh
+

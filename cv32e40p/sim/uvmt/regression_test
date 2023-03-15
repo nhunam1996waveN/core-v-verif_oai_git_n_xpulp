@@ -1,0 +1,17 @@
+#! /bin/bash
+for i in {0..1000}
+do
+	echo "Test number $i";
+	echo "Running tests.........";
+	. gen_testcase.sh $@;
+	. run_bash $@ > random_log;
+	grep -e "FAILLLLLLLLLLLLLLLLLLLLLLL"  random_log > tmp_grep_log;
+	if [ -s tmp_grep_log ]
+	then
+		echo "END regresion process."
+		echo "FAIL in running tests."
+		cat random_log;
+		break;
+	fi
+	# rm -rf random_log tmp_grep_log;
+done

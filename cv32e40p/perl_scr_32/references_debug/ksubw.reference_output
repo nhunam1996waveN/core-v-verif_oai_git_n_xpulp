@@ -1,0 +1,200 @@
+ffffffff
+ffffffff
+00000001 test_num: 2 , ksubw
+00000000 test_num: 3 , ksubw
+c8de404b test_num: 4 , ksubw
+80000000 test_num: 5 , ksubw
+00000000 test_num: 6 , ksubw
+7fffffff test_num: 7 , ksubw
+00000001 test_num: 8 , 
+00000001 test_num: 9 , 
+00000000 test_num: 10 , 
+9cfc2830 test_num: 11 , ksubw
+ffffffff test_num: 12 , ksubw
+ea90296d test_num: 13 , ksubw
+80000000 test_num: 14 , ksubw
+00000001 test_num: 15 , 
+00000001 test_num: 16 , 
+00000000 test_num: 17 , 
+7fffffff test_num: 18 , ksubw
+ffffffff test_num: 19 , ksubw
+9da0f372 test_num: 20 , ksubw
+00000000 test_num: 21 , ksubw
+80000001 test_num: 22 , ksubw
+00000001 test_num: 23 , ksubw
+00000000 test_num: 24 , ksubw
+99839006 test_num: 25 , ksubw
+997c29e3 test_num: 26 , ksubw
+80000000 test_num: 27 , ksubw
+00000001 test_num: 28 , 
+00000001 test_num: 29 , 
+00000000 test_num: 30 , 
+00000000 test_num: 31 , ksubw
+80000000 test_num: 32 , ksubw
+00000001 test_num: 33 , 
+00000001 test_num: 34 , 
+00000000 test_num: 35 , 
+380f93c0 test_num: 36 , ksubw
+80000001 test_num: 37 , ksubw
+00000001 test_num: 38 , ksubw
+00000001 test_num: 39 , ksubw
+7fffffff test_num: 40 , ksubw
+00000001 test_num: 41 , 
+00000001 test_num: 42 , 
+00000000 test_num: 43 , 
+80000001 test_num: 44 , ksubw
+00000000 test_num: 45 , ksubw
+00000000 test_num: 46 , ksubw
+7fffffff test_num: 47 , ksubw
+80000001 test_num: 48 , ksubw
+ffffffff test_num: 49 , ksubw
+7fffffff test_num: 50 , ksubw
+dff57b04 test_num: 51 , ksubw
+8e2d01d4 test_num: 52 , ksubw
+80000000 test_num: 53 , ksubw
+00911ed9 test_num: 54 , ksubw
+00000000 test_num: 55 , ksubw
+00000000 test_num: 56 , ksubw
+a44925ee test_num: 57 , ksubw
+00000000 test_num: 58 , ksubw
+00000000 test_num: 59 , ksubw
+80000000 test_num: 60 , ksubw
+00000000 test_num: 61 , ksubw
+7fffffff test_num: 62 , ksubw
+00000001 test_num: 63 , 
+00000001 test_num: 64 , 
+00000000 test_num: 65 , 
+00000000 test_num: 66 , ksubw
+00000001 test_num: 67 , ksubw
+227eb11d test_num: 68 , ksubw
+00000000 test_num: 69 , ksubw
+00000000 test_num: 70 , ksubw
+dfac20a1 test_num: 71 , ksubw
+ffffffff test_num: 72 , ksubw
+80000000 test_num: 73 , ksubw
+eac1c98f test_num: 74 , ksubw
+00000000 test_num: 75 , ksubw
+cc9bbe66 test_num: 76 , ksubw
+87a03af5 test_num: 77 , ksubw
+2940f0f2 test_num: 78 , ksubw
+00000000 test_num: 79 , ksubw
+80000000 test_num: 80 , ksubw
+00000001 test_num: 81 , 
+00000001 test_num: 82 , 
+00000000 test_num: 83 , 
+96405684 test_num: 84 , ksubw
+00000001 test_num: 85 , ksubw
+80000001 test_num: 86 , ksubw
+33d8a610 test_num: 87 , ksubw
+7fffffff test_num: 88 , ksubw
+b66b3c35 test_num: 89 , ksubw
+7e145ac1 test_num: 90 , ksubw
+fec299f2 test_num: 91 , ksubw
+7fffffff test_num: 92 , ksubw
+00000001 test_num: 93 , 
+00000001 test_num: 94 , 
+00000000 test_num: 95 , 
+80000001 test_num: 96 , ksubw
+a750b1a2 test_num: 97 , ksubw
+5ca0f1ef test_num: 98 , ksubw
+dc54faf3 test_num: 99 , ksubw
+00000000 test_num: 100 , ksubw
+00000001 test_num: 101 , ksubw
+0224ffb7 test_num: 102 , ksubw
+b5fd4354 test_num: 103 , ksubw
+51ee3eb4 test_num: 104 , ksubw
+7fffffff test_num: 105 , ksubw
+00000000 test_num: 106 , ksubw
+00000000 test_num: 107 , ksubw
+10aa05df test_num: 108 , ksubw
+a3e29f5d test_num: 109 , ksubw
+0094f375 test_num: 110 , ksubw
+00000001 test_num: 111 , ksubw
+502b94bf test_num: 112 , ksubw
+00000000 test_num: 113 , ksubw
+80110d7c test_num: 114 , ksubw
+80000000 test_num: 115 , ksubw
+00000001 test_num: 116 , 
+00000001 test_num: 117 , 
+00000000 test_num: 118 , 
+ea9dda5c test_num: 119 , ksubw
+60f0d809 test_num: 120 , ksubw
+79746046 test_num: 121 , ksubw
+00000001 test_num: 122 , ksubw
+013e4548 test_num: 123 , ksubw
+7fffffff test_num: 124 , ksubw
+7fffffff test_num: 125 , ksubw
+0a57ed2a test_num: 126 , ksubw
+7fffffff test_num: 127 , ksubw
+ffffffff test_num: 128 , ksubw
+9d8f99a5 test_num: 129 , ksubw
+83cafb50 test_num: 130 , ksubw
+3151ef5d test_num: 131 , ksubw
+00000000 test_num: 132 , ksubw
+f93fa831 test_num: 133 , ksubw
+7fffffff test_num: 134 , ksubw
+00000001 test_num: 135 , 
+00000001 test_num: 136 , 
+00000000 test_num: 137 , 
+602772fe test_num: 138 , ksubw
+23831008 test_num: 139 , ksubw
+00000000 test_num: 140 , ksubw
+80000001 test_num: 141 , ksubw
+67a0ec40 test_num: 142 , ksubw
+067cfb5d test_num: 143 , ksubw
+00000001 test_num: 144 , ksubw
+a4f1185d test_num: 145 , ksubw
+ffffffff test_num: 146 , ksubw
+b54a5538 test_num: 147 , ksubw
+5ff5fe20 test_num: 148 , ksubw
+00000000 test_num: 149 , ksubw
+35901e2f test_num: 150 , ksubw
+80000001 test_num: 151 , ksubw
+ffffffff test_num: 152 , ksubw
+00000000 test_num: 153 , ksubw
+ef8bede0 test_num: 154 , ksubw
+d126fd63 test_num: 155 , ksubw
+68919905 test_num: 156 , ksubw
+ffffffff test_num: 157 , ksubw
+49bb4f54 test_num: 158 , ksubw
+00000000 test_num: 159 , ksubw
+80000000 test_num: 160 , ksubw
+00000001 test_num: 161 , 
+00000001 test_num: 162 , 
+00000000 test_num: 163 , 
+ffffffff test_num: 164 , ksubw
+d0be3a13 test_num: 165 , ksubw
+f491a759 test_num: 166 , ksubw
+7fffffff test_num: 167 , ksubw
+00000001 test_num: 168 , 
+00000001 test_num: 169 , 
+00000000 test_num: 170 , 
+00000000 test_num: 171 , ksubw
+00000000 test_num: 172 , ksubw
+7fffffff test_num: 173 , ksubw
+00000001 test_num: 174 , 
+00000001 test_num: 175 , 
+00000000 test_num: 176 , 
+b4ad9d20 test_num: 177 , ksubw
+80000001 test_num: 178 , ksubw
+80000000 test_num: 179 , ksubw
+7fffffff test_num: 180 , ksubw
+7fffffff test_num: 181 , ksubw
+ffffffff test_num: 182 , ksubw
+00000000 test_num: 183 , ksubw
+ffffffff test_num: 184 , ksubw
+ffe4f6d8 test_num: 185 , ksubw
+aa06b75d test_num: 186 , ksubw
+7fffffff test_num: 187 , ksubw
+00000001 test_num: 188 , 
+00000001 test_num: 189 , 
+00000000 test_num: 190 , 
+98718e19 test_num: 191 , ksubw
+80000000 test_num: 192 , ksubw
+00000001 test_num: 193 , 
+00000001 test_num: 194 , 
+00000000 test_num: 195 , 
+80000001 test_num: 196 , ksubw
+00000001 test_num: 197 , ksubw
+de52b7f2 test_num: 198 , ksubw
+00000000 test_num: 199 , ksubw

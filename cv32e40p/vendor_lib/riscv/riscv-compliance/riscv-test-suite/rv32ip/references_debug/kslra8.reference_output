@@ -1,0 +1,200 @@
+ffffffff
+ffffffff
+fa00ffff test_num: 2 , kslra8
+8000d1ff test_num: 3 , kslra8
+c0ff00f9 test_num: 4 , kslra8
+7f80807f test_num: 5 , kslra8
+00000001 test_num: 6 , 
+00000001 test_num: 7 , 
+00000000 test_num: 8 , 
+35ffc0c0 test_num: 9 , kslra8
+00008000 test_num: 10 , kslra8
+807f7f80 test_num: 11 , kslra8
+00000001 test_num: 12 , 
+00000001 test_num: 13 , 
+00000000 test_num: 14 , 
+fcffffff test_num: 15 , kslra8
+f0dbffff test_num: 16 , kslra8
+ffff00ff test_num: 17 , kslra8
+ddff8f00 test_num: 18 , kslra8
+80fe8026 test_num: 19 , kslra8
+00000001 test_num: 20 , 
+00000001 test_num: 21 , 
+00000000 test_num: 22 , 
+00007e00 test_num: 23 , kslra8
+47008077 test_num: 24 , kslra8
+ffb18000 test_num: 25 , kslra8
+9c80fc80 test_num: 26 , kslra8
+00000001 test_num: 27 , 
+00000001 test_num: 28 , 
+00000000 test_num: 29 , 
+80800000 test_num: 30 , kslra8
+00e8d304 test_num: 31 , kslra8
+da5900ff test_num: 32 , kslra8
+160080ff test_num: 33 , kslra8
+80807f80 test_num: 34 , kslra8
+00000001 test_num: 35 , 
+00000001 test_num: 36 , 
+00000000 test_num: 37 , 
+80f8007f test_num: 38 , kslra8
+00000001 test_num: 39 , 
+00000001 test_num: 40 , 
+00000000 test_num: 41 , 
+468080ff test_num: 42 , kslra8
+0004c0ff test_num: 43 , kslra8
+00ffff80 test_num: 44 , kslra8
+00ffff80 test_num: 45 , kslra8
+f8ff8000 test_num: 46 , kslra8
+00ffcfff test_num: 47 , kslra8
+fff9c0d0 test_num: 48 , kslra8
+804980eb test_num: 49 , kslra8
+80e0f000 test_num: 50 , kslra8
+00000001 test_num: 51 , 
+00000001 test_num: 52 , 
+00000000 test_num: 53 , 
+00048000 test_num: 54 , kslra8
+80808080 test_num: 55 , kslra8
+00000001 test_num: 56 , 
+00000001 test_num: 57 , 
+00000000 test_num: 58 , 
+800000ff test_num: 59 , kslra8
+80ff00ff test_num: 60 , kslra8
+ffff80ff test_num: 61 , kslra8
+e5008080 test_num: 62 , kslra8
+0080b480 test_num: 63 , kslra8
+80800080 test_num: 64 , kslra8
+00000001 test_num: 65 , 
+00000001 test_num: 66 , 
+00000000 test_num: 67 , 
+1effcb00 test_num: 68 , kslra8
+00c3ffff test_num: 69 , kslra8
+00000cff test_num: 70 , kslra8
+80800065 test_num: 71 , kslra8
+00313ec0 test_num: 72 , kslra8
+ff300080 test_num: 73 , kslra8
+c0e7fdff test_num: 74 , kslra8
+ff000089 test_num: 75 , kslra8
+39f01bff test_num: 76 , kslra8
+76ffff00 test_num: 77 , kslra8
+80000080 test_num: 78 , kslra8
+c024ffc0 test_num: 79 , kslra8
+ffe6a7ff test_num: 80 , kslra8
+ffffe1ff test_num: 81 , kslra8
+ffe8ff00 test_num: 82 , kslra8
+ff6a1517 test_num: 83 , kslra8
+800080ff test_num: 84 , kslra8
+2000fc2b test_num: 85 , kslra8
+00800000 test_num: 86 , kslra8
+80ff80a2 test_num: 87 , kslra8
+0016c000 test_num: 88 , kslra8
+0080805c test_num: 89 , kslra8
+b9808000 test_num: 90 , kslra8
+ff6e8200 test_num: 91 , kslra8
+000000ff test_num: 92 , kslra8
+008022cc test_num: 93 , kslra8
+80ff00ff test_num: 94 , kslra8
+ff800000 test_num: 95 , kslra8
+80ff80ff test_num: 96 , kslra8
+0000ff00 test_num: 97 , kslra8
+ffe50081 test_num: 98 , kslra8
+80e6fe00 test_num: 99 , kslra8
+00000001 test_num: 100 , 
+00000001 test_num: 101 , 
+00000000 test_num: 102 , 
+fff50000 test_num: 103 , kslra8
+00f88080 test_num: 104 , kslra8
+00000001 test_num: 105 , 
+00000001 test_num: 106 , 
+00000000 test_num: 107 , 
+fe0000fe test_num: 108 , kslra8
+ff0080ff test_num: 109 , kslra8
+cf003500 test_num: 110 , kslra8
+0080f07f test_num: 111 , kslra8
+00000001 test_num: 112 , 
+00000001 test_num: 113 , 
+00000000 test_num: 114 , 
+ff00f0f0 test_num: 115 , kslra8
+ffffc0ff test_num: 116 , kslra8
+0009f3ff test_num: 117 , kslra8
+fe00fcff test_num: 118 , kslra8
+c800c0c5 test_num: 119 , kslra8
+808080bc test_num: 120 , kslra8
+ff000080 test_num: 121 , kslra8
+e0e0ffe0 test_num: 122 , kslra8
+ff80ffff test_num: 123 , kslra8
+008080dc test_num: 124 , kslra8
+00000001 test_num: 125 , 
+00000001 test_num: 126 , 
+00000000 test_num: 127 , 
+af8eff0e test_num: 128 , kslra8
+00000080 test_num: 129 , kslra8
+ff80ff80 test_num: 130 , kslra8
+c0ffc0fc test_num: 131 , kslra8
+00c0c032 test_num: 132 , kslra8
+1ec3fff2 test_num: 133 , kslra8
+ff6e8080 test_num: 134 , kslra8
+0004f7ff test_num: 135 , kslra8
+00008080 test_num: 136 , kslra8
+00000001 test_num: 137 , 
+00000001 test_num: 138 , 
+00000000 test_num: 139 , 
+f8f8ffff test_num: 140 , kslra8
+f3ffcd80 test_num: 141 , kslra8
+ffc0fff2 test_num: 142 , kslra8
+3380dc00 test_num: 143 , kslra8
+ed00ffdb test_num: 144 , kslra8
+c0ffc3c0 test_num: 145 , kslra8
+00ffbef9 test_num: 146 , kslra8
+19ff809f test_num: 147 , kslra8
+ffffffff test_num: 148 , kslra8
+f800f000 test_num: 149 , kslra8
+ffff8000 test_num: 150 , kslra8
+8a000080 test_num: 151 , kslra8
+80ff8048 test_num: 152 , kslra8
+00803160 test_num: 153 , kslra8
+ffff80ff test_num: 154 , kslra8
+00ff8080 test_num: 155 , kslra8
+80800080 test_num: 156 , kslra8
+f4c000c0 test_num: 157 , kslra8
+0400f8f8 test_num: 158 , kslra8
+ffffc0ff test_num: 159 , kslra8
+80800000 test_num: 160 , kslra8
+00000001 test_num: 161 , 
+00000001 test_num: 162 , 
+00000000 test_num: 163 , 
+ff003500 test_num: 164 , kslra8
+ff0080ff test_num: 165 , kslra8
+ffffff80 test_num: 166 , kslra8
+6aff80ff test_num: 167 , kslra8
+00c0ffc0 test_num: 168 , kslra8
+806e7980 test_num: 169 , kslra8
+0000ffff test_num: 170 , kslra8
+00900080 test_num: 171 , kslra8
+00ee00c0 test_num: 172 , kslra8
+ffffff80 test_num: 173 , kslra8
+0000c0ff test_num: 174 , kslra8
+00c0000a test_num: 175 , kslra8
+80ffffc2 test_num: 176 , kslra8
+00ff8057 test_num: 177 , kslra8
+00000080 test_num: 178 , kslra8
+ff000000 test_num: 179 , kslra8
+00000000 test_num: 180 , kslra8
+000202fc test_num: 181 , kslra8
+c0ffffd8 test_num: 182 , kslra8
+0080002e test_num: 183 , kslra8
+d50080ff test_num: 184 , kslra8
+ffff0000 test_num: 185 , kslra8
+43ff80ff test_num: 186 , kslra8
+00ffe2fd test_num: 187 , kslra8
+ff00ffc0 test_num: 188 , kslra8
+80008000 test_num: 189 , kslra8
+ff000f80 test_num: 190 , kslra8
+00ff8000 test_num: 191 , kslra8
+8000ffff test_num: 192 , kslra8
+8000c9ff test_num: 193 , kslra8
+8080a7ff test_num: 194 , kslra8
+3400c02b test_num: 195 , kslra8
+9680ff00 test_num: 196 , kslra8
+ffc000c0 test_num: 197 , kslra8
+fcfcff00 test_num: 198 , kslra8
+ffc031c0 test_num: 199 , kslra8

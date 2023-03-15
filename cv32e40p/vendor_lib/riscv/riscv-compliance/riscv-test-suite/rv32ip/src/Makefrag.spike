@@ -1,0 +1,6 @@
+rv32ip_sc_tests = p.bclr
+  
+rv32ip_p_tests = $(addprefix rv32ip-p-, $(rv32ip_sc_tests))
+rv32ip_v_tests = $(addprefix rv32ip-v-, $(rv32ip_sc_tests))
+
+spike32_tests += $(rv32ip_p_tests) $(rv32ip_v_tests)       

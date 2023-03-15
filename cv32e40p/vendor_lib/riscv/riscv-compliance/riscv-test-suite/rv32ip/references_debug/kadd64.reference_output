@@ -1,0 +1,300 @@
+ffffffff
+ffffffff
+ffffffff test_num: 2 , kadd64
+ffffffff test_num: 2 , kadd64
+00000000 test_num: 3 , kadd64
+80000000 test_num: 3 , kadd64
+00000001 test_num: 4 , 
+00000001 test_num: 5 , 
+00000000 test_num: 6 , 
+6c02015d test_num: 7 , kadd64
+261a36f8 test_num: 7 , kadd64
+d782fc6a test_num: 8 , kadd64
+c4e98b7a test_num: 8 , kadd64
+a266b2cc test_num: 9 , kadd64
+1e445523 test_num: 9 , kadd64
+66e53daf test_num: 10 , kadd64
+fbcf199e test_num: 10 , kadd64
+00000000 test_num: 11 , kadd64
+80000000 test_num: 11 , kadd64
+00000001 test_num: 12 , 
+00000001 test_num: 13 , 
+00000000 test_num: 14 , 
+00000000 test_num: 15 , kadd64
+80000000 test_num: 15 , kadd64
+00000001 test_num: 16 , 
+00000001 test_num: 17 , 
+00000000 test_num: 18 , 
+ffffffff test_num: 19 , kadd64
+ffffffff test_num: 19 , kadd64
+00000000 test_num: 20 , kadd64
+80000000 test_num: 20 , kadd64
+00000000 test_num: 21 , kadd64
+80000000 test_num: 21 , kadd64
+00000001 test_num: 22 , 
+00000001 test_num: 23 , 
+00000000 test_num: 24 , 
+b9e27c09 test_num: 25 , kadd64
+5fad695f test_num: 25 , kadd64
+ffffffff test_num: 26 , kadd64
+ffffffff test_num: 26 , kadd64
+ffffffff test_num: 27 , kadd64
+ffffffff test_num: 27 , kadd64
+00000000 test_num: 28 , kadd64
+80000000 test_num: 28 , kadd64
+00000000 test_num: 29 , kadd64
+80000000 test_num: 29 , kadd64
+00000001 test_num: 30 , 
+00000001 test_num: 31 , 
+00000000 test_num: 32 , 
+00000000 test_num: 33 , kadd64
+80000000 test_num: 33 , kadd64
+b0cba9c7 test_num: 34 , kadd64
+a935453d test_num: 34 , kadd64
+3deb0e76 test_num: 35 , kadd64
+79d3d169 test_num: 35 , kadd64
+32d78bc5 test_num: 36 , kadd64
+7f390cfc test_num: 36 , kadd64
+00000000 test_num: 37 , kadd64
+80000000 test_num: 37 , kadd64
+00000001 test_num: 38 , 
+00000001 test_num: 39 , 
+00000000 test_num: 40 , 
+00000000 test_num: 41 , kadd64
+80000000 test_num: 41 , kadd64
+ffffffff test_num: 42 , kadd64
+ffffffff test_num: 42 , kadd64
+159e28e3 test_num: 43 , kadd64
+e3c8885a test_num: 43 , kadd64
+9b541139 test_num: 44 , kadd64
+a4880af0 test_num: 44 , kadd64
+fffffffe test_num: 45 , kadd64
+ffffffff test_num: 45 , kadd64
+00000000 test_num: 46 , kadd64
+80000000 test_num: 46 , kadd64
+fffffffe test_num: 47 , kadd64
+ffffffff test_num: 47 , kadd64
+fffffffe test_num: 48 , kadd64
+ffffffff test_num: 48 , kadd64
+ab4fe41d test_num: 49 , kadd64
+84edd396 test_num: 49 , kadd64
+00000000 test_num: 50 , kadd64
+80000000 test_num: 50 , kadd64
+00000001 test_num: 51 , 
+00000001 test_num: 52 , 
+00000000 test_num: 53 , 
+aafd2903 test_num: 54 , kadd64
+a5e82b86 test_num: 54 , kadd64
+00000000 test_num: 55 , kadd64
+00000000 test_num: 55 , kadd64
+ffffffff test_num: 56 , kadd64
+ffffffff test_num: 56 , kadd64
+ffffffff test_num: 57 , kadd64
+ffffffff test_num: 57 , kadd64
+00000000 test_num: 58 , kadd64
+80000000 test_num: 58 , kadd64
+00000001 test_num: 59 , 
+00000001 test_num: 60 , 
+00000000 test_num: 61 , 
+00000000 test_num: 62 , kadd64
+80000000 test_num: 62 , kadd64
+00000001 test_num: 63 , 
+00000001 test_num: 64 , 
+00000000 test_num: 65 , 
+00000000 test_num: 66 , kadd64
+00000000 test_num: 66 , kadd64
+00000000 test_num: 67 , kadd64
+80000000 test_num: 67 , kadd64
+00000000 test_num: 68 , kadd64
+80000000 test_num: 68 , kadd64
+00000001 test_num: 69 , 
+00000001 test_num: 70 , 
+00000000 test_num: 71 , 
+00000000 test_num: 72 , kadd64
+80000000 test_num: 72 , kadd64
+00000001 test_num: 73 , 
+00000001 test_num: 74 , 
+00000000 test_num: 75 , 
+ffffffff test_num: 76 , kadd64
+7fffffff test_num: 76 , kadd64
+00000001 test_num: 77 , 
+00000001 test_num: 78 , 
+00000000 test_num: 79 , 
+fffffffe test_num: 80 , kadd64
+ffffffff test_num: 80 , kadd64
+ffffffff test_num: 81 , kadd64
+ffffffff test_num: 81 , kadd64
+ffffffff test_num: 82 , kadd64
+ffffffff test_num: 82 , kadd64
+00000000 test_num: 83 , kadd64
+80000000 test_num: 83 , kadd64
+00000000 test_num: 84 , kadd64
+80000000 test_num: 84 , kadd64
+00000001 test_num: 85 , 
+00000001 test_num: 86 , 
+00000000 test_num: 87 , 
+00000000 test_num: 88 , kadd64
+80000000 test_num: 88 , kadd64
+00000001 test_num: 89 , 
+00000001 test_num: 90 , 
+00000000 test_num: 91 , 
+00000000 test_num: 92 , kadd64
+80000000 test_num: 92 , kadd64
+00000001 test_num: 93 , 
+00000001 test_num: 94 , 
+00000000 test_num: 95 , 
+ffffffff test_num: 96 , kadd64
+ffffffff test_num: 96 , kadd64
+320cd255 test_num: 97 , kadd64
+e284dda3 test_num: 97 , kadd64
+00000000 test_num: 98 , kadd64
+80000000 test_num: 98 , kadd64
+00000001 test_num: 99 , 
+00000001 test_num: 100 , 
+00000000 test_num: 101 , 
+00000000 test_num: 102 , kadd64
+80000000 test_num: 102 , kadd64
+ffffffff test_num: 103 , kadd64
+ffffffff test_num: 103 , kadd64
+00000000 test_num: 104 , kadd64
+80000000 test_num: 104 , kadd64
+00000001 test_num: 105 , 
+00000001 test_num: 106 , 
+00000000 test_num: 107 , 
+bfaa6cc8 test_num: 108 , kadd64
+dc45ce08 test_num: 108 , kadd64
+00000000 test_num: 109 , kadd64
+00000000 test_num: 109 , kadd64
+b4f7db6a test_num: 110 , kadd64
+939ee6f8 test_num: 110 , kadd64
+00000000 test_num: 111 , kadd64
+80000000 test_num: 111 , kadd64
+00000001 test_num: 112 , 
+00000001 test_num: 113 , 
+00000000 test_num: 114 , 
+00000000 test_num: 115 , kadd64
+80000000 test_num: 115 , kadd64
+ffffffff test_num: 116 , kadd64
+ffffffff test_num: 116 , kadd64
+ffffffff test_num: 117 , kadd64
+ffffffff test_num: 117 , kadd64
+ffffffff test_num: 118 , kadd64
+ffffffff test_num: 118 , kadd64
+00000000 test_num: 119 , kadd64
+80000000 test_num: 119 , kadd64
+f0defec9 test_num: 120 , kadd64
+92e2a5fc test_num: 120 , kadd64
+00000000 test_num: 121 , kadd64
+80000000 test_num: 121 , kadd64
+00000001 test_num: 122 , 
+00000001 test_num: 123 , 
+00000000 test_num: 124 , 
+00000000 test_num: 125 , kadd64
+80000000 test_num: 125 , kadd64
+00000001 test_num: 126 , 
+00000001 test_num: 127 , 
+00000000 test_num: 128 , 
+7a6bb9fe test_num: 129 , kadd64
+ee95df9f test_num: 129 , kadd64
+20377dd0 test_num: 130 , kadd64
+ac9edb6b test_num: 130 , kadd64
+fffffffe test_num: 131 , kadd64
+ffffffff test_num: 131 , kadd64
+459318bd test_num: 132 , kadd64
+c97b23cd test_num: 132 , kadd64
+00000000 test_num: 133 , kadd64
+80000000 test_num: 133 , kadd64
+00000001 test_num: 134 , 
+00000001 test_num: 135 , 
+00000000 test_num: 136 , 
+00000000 test_num: 137 , kadd64
+80000000 test_num: 137 , kadd64
+00000001 test_num: 138 , 
+00000001 test_num: 139 , 
+00000000 test_num: 140 , 
+00000000 test_num: 141 , kadd64
+80000000 test_num: 141 , kadd64
+00000000 test_num: 142 , kadd64
+80000000 test_num: 142 , kadd64
+00000001 test_num: 143 , 
+00000001 test_num: 144 , 
+00000000 test_num: 145 , 
+00000000 test_num: 146 , kadd64
+00000000 test_num: 146 , kadd64
+8928cd41 test_num: 147 , kadd64
+431160bb test_num: 147 , kadd64
+00000000 test_num: 148 , kadd64
+80000000 test_num: 148 , kadd64
+d7f1e5ec test_num: 149 , kadd64
+f1c9a5bc test_num: 149 , kadd64
+00000000 test_num: 150 , kadd64
+80000000 test_num: 150 , kadd64
+00000001 test_num: 151 , 
+00000001 test_num: 152 , 
+00000000 test_num: 153 , 
+00000000 test_num: 154 , kadd64
+80000000 test_num: 154 , kadd64
+00000001 test_num: 155 , 
+00000001 test_num: 156 , 
+00000000 test_num: 157 , 
+fffffffe test_num: 158 , kadd64
+ffffffff test_num: 158 , kadd64
+00000000 test_num: 159 , kadd64
+80000000 test_num: 159 , kadd64
+00000001 test_num: 160 , 
+00000001 test_num: 161 , 
+00000000 test_num: 162 , 
+00000000 test_num: 163 , kadd64
+80000000 test_num: 163 , kadd64
+00000001 test_num: 164 , 
+00000001 test_num: 165 , 
+00000000 test_num: 166 , 
+00000000 test_num: 167 , kadd64
+80000000 test_num: 167 , kadd64
+00000001 test_num: 168 , 
+00000001 test_num: 169 , 
+00000000 test_num: 170 , 
+ffffffff test_num: 171 , kadd64
+ffffffff test_num: 171 , kadd64
+ffffffff test_num: 172 , kadd64
+ffffffff test_num: 172 , kadd64
+00000000 test_num: 173 , kadd64
+80000000 test_num: 173 , kadd64
+00000000 test_num: 174 , kadd64
+80000000 test_num: 174 , kadd64
+00000001 test_num: 175 , 
+00000001 test_num: 176 , 
+00000000 test_num: 177 , 
+ffffffff test_num: 178 , kadd64
+ffffffff test_num: 178 , kadd64
+ffffffff test_num: 179 , kadd64
+ffffffff test_num: 179 , kadd64
+00000000 test_num: 180 , kadd64
+80000000 test_num: 180 , kadd64
+00000001 test_num: 181 , 
+00000001 test_num: 182 , 
+00000000 test_num: 183 , 
+00000000 test_num: 184 , kadd64
+00000000 test_num: 184 , kadd64
+96ea581d test_num: 185 , kadd64
+a15361a4 test_num: 185 , kadd64
+00000000 test_num: 186 , kadd64
+80000000 test_num: 186 , kadd64
+00000001 test_num: 187 , 
+00000001 test_num: 188 , 
+00000000 test_num: 189 , 
+00000000 test_num: 190 , kadd64
+80000000 test_num: 190 , kadd64
+00000001 test_num: 191 , 
+00000001 test_num: 192 , 
+00000000 test_num: 193 , 
+00000000 test_num: 194 , kadd64
+80000000 test_num: 194 , kadd64
+00000000 test_num: 195 , kadd64
+00000000 test_num: 195 , kadd64
+00000000 test_num: 196 , kadd64
+80000000 test_num: 196 , kadd64
+00000001 test_num: 197 , 
+00000001 test_num: 198 , 
+00000000 test_num: 199 , 
+00000000
