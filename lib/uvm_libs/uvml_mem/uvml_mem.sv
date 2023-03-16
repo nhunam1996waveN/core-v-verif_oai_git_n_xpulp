@@ -71,7 +71,7 @@ function uvml_mem_c::new(string name="uvml_mem");
 endfunction : new
 
 function void uvml_mem_c::write(bit[XLEN-1:0] addr, reg[7:0] data);
-   $display("@%t debug uvml_mem.sv: add: %h data: %h",$time(), addr, data);
+   // $display("@%t debug uvml_mem.sv: add: %h data: %h",$time(), addr, data);
    _mem[addr] = data;
 
 endfunction : write

@@ -41,8 +41,7 @@
  */
 module uvmt_cv32e40p_dut_wrap #(
                             // CV32E40P parameters.  See User Manual.
-                            parameter PULP_XPULP          =  0,
-                                      PULP_CLUSTER        =  0,
+                            parameter PULP_CLUSTER        =  0,
                                       FPU                 =  0,
                                       PULP_ZFINX          =  0,
                                       NUM_MHPMCOUNTERS    =  1,
@@ -124,7 +123,6 @@ module uvmt_cv32e40p_dut_wrap #(
     // --------------------------------------------
     // instantiate the core
     cv32e40p_wrapper #(
-                 .PULP_XPULP       (PULP_XPULP),
                  .PULP_CLUSTER     (PULP_CLUSTER),
                  .FPU              (FPU),
                  .PULP_ZFINX       (PULP_ZFINX),

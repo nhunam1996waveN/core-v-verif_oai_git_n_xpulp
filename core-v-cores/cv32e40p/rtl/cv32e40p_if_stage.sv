@@ -293,7 +293,6 @@ module cv32e40p_if_stage
   //----------------------------------------------------------------------------
 
 `ifdef CV32E40P_ASSERT_ON
-  //gen_no_pulp_xpulp_assertions
   // Check that PC Mux cannot select Hardware Loop address iF PULP extensions are not included
   property p_pc_mux_0;
     @(posedge clk) disable iff (!rst_n) (1'b1) |-> (pc_mux_i != PC_HWLOOP);

@@ -28,7 +28,6 @@
 module cv32e40p_wrapper
   import cv32e40p_apu_core_pkg::*;
 #(
-    parameter PULP_XPULP          =  0,                   // PULP ISA Extension (incl. custom CSRs and hardware loop, excl. p.elw)
     parameter PULP_CLUSTER = 0,  // PULP Cluster interface (incl. p.elw)
     parameter FPU = 0,  // Floating Point Unit (interfaced via APU interface)
     parameter PULP_ZFINX = 0,  // Float-in-General Purpose registers
@@ -106,7 +105,6 @@ module cv32e40p_wrapper
       cv32e40p_prefetch_controller_sva
       #(
       .DEPTH          (DEPTH),
-      .PULP_XPULP     (PULP_XPULP),
       .PULP_OBI       (PULP_OBI),
       .FIFO_ADDR_DEPTH(FIFO_ADDR_DEPTH)
   ) prefetch_controller_sva (.*);
@@ -114,7 +112,6 @@ module cv32e40p_wrapper
 `endif  // CV32E40P_ASSERT_ON
 
   cv32e40p_core_log #(
-      .PULP_XPULP      (PULP_XPULP),
       .PULP_CLUSTER    (PULP_CLUSTER),
       .FPU             (FPU),
       .PULP_ZFINX      (PULP_ZFINX),

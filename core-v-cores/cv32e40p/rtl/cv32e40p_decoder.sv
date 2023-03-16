@@ -27,7 +27,6 @@
 
 module cv32e40p_decoder import cv32e40p_pkg::*; import cv32e40p_apu_core_pkg::*; import cv32e40p_fpu_pkg::*;
 #(
-  parameter PULP_XPULP        = 1,              // PULP ISA Extension (including PULP specific CSRs and hardware loop, excluding p.elw)
   parameter PULP_CLUSTER      =  0,
   parameter A_EXTENSION       = 0,
   parameter FPU               = 0,
@@ -357,7 +356,6 @@ module cv32e40p_decoder import cv32e40p_pkg::*; import cv32e40p_apu_core_pkg::*;
       OPCODE_STORE,
       OPCODE_STORE_POST: begin
         debug_add_decode = 1'b1;
-        // if (PULP_XPULP || (instr_rdata_i[6:0] == OPCODE_STORE)) begin //nhunammm
         begin
           data_req       = 1'b1;
           data_we_o      = 1'b1;
@@ -401,7 +399,6 @@ module cv32e40p_decoder import cv32e40p_pkg::*; import cv32e40p_apu_core_pkg::*;
 
       OPCODE_LOAD,
       OPCODE_LOAD_POST: begin
-        // if (PULP_XPULP || (instr_rdata_i[6:0] == OPCODE_LOAD)) begin //nhunammm
         begin
           debug_add_decode = 1'b1;
           data_req         = 1'b1;
@@ -595,16 +592,65 @@ module cv32e40p_decoder import cv32e40p_pkg::*; import cv32e40p_apu_core_pkg::*;
       OPCODE_OP: begin  // Register-Register ALU operation
         
         // PREFIX 11
-        if (instr_rdata_i[31:30] == 2'b11) begin
-          if (PULP_XPULP) begin
-            //////////////////////////////
-            // IMMEDIATE BIT-MANIPULATION
-            //////////////////////////////
+      if (instr_rdata_i[31:30] == 2'b11) begin
+        //////////////////////////////
+        // IMMEDIATE BIT-MANIPULATION
+        //////////////////////////////
 
+        regfile_alu_we = 1'b1;
+        rega_used_o    = 1'b1;
+
+        // bit-manipulation instructions
+        bmask_a_mux_o       = BMASK_A_S3;
+        bmask_b_mux_o       = BMASK_B_S2;
+        alu_op_b_mux_sel_o  = OP_B_IMM;
+
+        unique case (instr_rdata_i[14:12])
+          3'b000: begin
+            alu_operator_o  = ALU_BEXT;
+            imm_b_mux_sel_o = IMMB_S2;
+            bmask_b_mux_o   = BMASK_B_ZERO;
+          end
+          3'b001: begin
+            alu_operator_o  = ALU_BEXTU;
+            imm_b_mux_sel_o = IMMB_S2;
+            bmask_b_mux_o   = BMASK_B_ZERO;
+          end
+          3'b010: begin
+            alu_operator_o  = ALU_BINS;
+            imm_b_mux_sel_o = IMMB_S2;
+            regc_used_o     = 1'b1;
+            regc_mux_o      = REGC_RD;
+          end
+          3'b011: begin
+            alu_operator_o = ALU_BCLR;
+          end
+          3'b100: begin
+            alu_operator_o = ALU_BSET;
+          end
+          3'b101: begin
+            alu_operator_o        = ALU_BREV;
+            // Enable write back to RD
+            regc_used_o           = 1'b1;
+            regc_mux_o            = REGC_RD;
+            // Extract the source register on operand a
+            imm_b_mux_sel_o       = IMMB_S2;
+            // Map the radix to bmask_a immediate
+            alu_bmask_a_mux_sel_o = BMASK_A_IMM;
+          end
+          default: illegal_insn_o = 1'b1;
+        endcase
+      end
+
+        // PREFIX 10
+        else if (instr_rdata_i[31:30] == 2'b10) begin
+          //////////////////////////////
+          // REGISTER BIT-MANIPULATION
+          //////////////////////////////
+          if (instr_rdata_i[29:25]==5'b00000) begin
             regfile_alu_we = 1'b1;
             rega_used_o    = 1'b1;
 
-            // bit-manipulation instructions
             bmask_a_mux_o       = BMASK_A_S3;
             bmask_b_mux_o       = BMASK_B_S2;
             alu_op_b_mux_sel_o  = OP_B_IMM;
@@ -614,104 +660,47 @@ module cv32e40p_decoder import cv32e40p_pkg::*; import cv32e40p_apu_core_pkg::*;
                 alu_operator_o  = ALU_BEXT;
                 imm_b_mux_sel_o = IMMB_S2;
                 bmask_b_mux_o   = BMASK_B_ZERO;
+                //register variant
+                alu_op_b_mux_sel_o     = OP_B_BMASK;
+                alu_bmask_a_mux_sel_o  = BMASK_A_REG;
+                regb_used_o            = 1'b1;
               end
               3'b001: begin
                 alu_operator_o  = ALU_BEXTU;
                 imm_b_mux_sel_o = IMMB_S2;
                 bmask_b_mux_o   = BMASK_B_ZERO;
+                //register variant
+                alu_op_b_mux_sel_o     = OP_B_BMASK;
+                alu_bmask_a_mux_sel_o  = BMASK_A_REG;
+                regb_used_o            = 1'b1;
               end
               3'b010: begin
-                alu_operator_o  = ALU_BINS;
-                imm_b_mux_sel_o = IMMB_S2;
-                regc_used_o     = 1'b1;
-                regc_mux_o      = REGC_RD;
+                alu_operator_o      = ALU_BINS;
+                imm_b_mux_sel_o     = IMMB_S2;
+                regc_used_o         = 1'b1;
+                regc_mux_o          = REGC_RD;
+                //register variant
+                alu_op_b_mux_sel_o     = OP_B_BMASK;
+                alu_bmask_a_mux_sel_o  = BMASK_A_REG;
+                alu_bmask_b_mux_sel_o  = BMASK_B_REG;
+                regb_used_o            = 1'b1;
               end
               3'b011: begin
                 alu_operator_o = ALU_BCLR;
+                //register variant
+                regb_used_o            = 1'b1;
+                alu_bmask_a_mux_sel_o  = BMASK_A_REG;
+                alu_bmask_b_mux_sel_o  = BMASK_B_REG;
               end
               3'b100: begin
                 alu_operator_o = ALU_BSET;
-              end
-              3'b101: begin
-                alu_operator_o        = ALU_BREV;
-                // Enable write back to RD
-                regc_used_o           = 1'b1;
-                regc_mux_o            = REGC_RD;
-                // Extract the source register on operand a
-                imm_b_mux_sel_o       = IMMB_S2;
-                // Map the radix to bmask_a immediate
-                alu_bmask_a_mux_sel_o = BMASK_A_IMM;
+                //register variant
+                regb_used_o            = 1'b1;
+                alu_bmask_a_mux_sel_o  = BMASK_A_REG;
+                alu_bmask_b_mux_sel_o  = BMASK_B_REG;
               end
               default: illegal_insn_o = 1'b1;
             endcase
-          end else begin
-            illegal_insn_o = 1'b1;
-          end
-        end
-
-        // PREFIX 10
-        else if (instr_rdata_i[31:30] == 2'b10) begin
-          //////////////////////////////
-          // REGISTER BIT-MANIPULATION
-          //////////////////////////////
-          if (instr_rdata_i[29:25]==5'b00000) begin
-            if (PULP_XPULP) begin
-              regfile_alu_we = 1'b1;
-              rega_used_o    = 1'b1;
-
-              bmask_a_mux_o       = BMASK_A_S3;
-              bmask_b_mux_o       = BMASK_B_S2;
-              alu_op_b_mux_sel_o  = OP_B_IMM;
-
-              unique case (instr_rdata_i[14:12])
-                3'b000: begin
-                  alu_operator_o  = ALU_BEXT;
-                  imm_b_mux_sel_o = IMMB_S2;
-                  bmask_b_mux_o   = BMASK_B_ZERO;
-                  //register variant
-                  alu_op_b_mux_sel_o     = OP_B_BMASK;
-                  alu_bmask_a_mux_sel_o  = BMASK_A_REG;
-                  regb_used_o            = 1'b1;
-                end
-                3'b001: begin
-                  alu_operator_o  = ALU_BEXTU;
-                  imm_b_mux_sel_o = IMMB_S2;
-                  bmask_b_mux_o   = BMASK_B_ZERO;
-                  //register variant
-                  alu_op_b_mux_sel_o     = OP_B_BMASK;
-                  alu_bmask_a_mux_sel_o  = BMASK_A_REG;
-                  regb_used_o            = 1'b1;
-                end
-                3'b010: begin
-                  alu_operator_o      = ALU_BINS;
-                  imm_b_mux_sel_o     = IMMB_S2;
-                  regc_used_o         = 1'b1;
-                  regc_mux_o          = REGC_RD;
-                  //register variant
-                  alu_op_b_mux_sel_o     = OP_B_BMASK;
-                  alu_bmask_a_mux_sel_o  = BMASK_A_REG;
-                  alu_bmask_b_mux_sel_o  = BMASK_B_REG;
-                  regb_used_o            = 1'b1;
-                end
-                3'b011: begin
-                  alu_operator_o = ALU_BCLR;
-                  //register variant
-                  regb_used_o            = 1'b1;
-                  alu_bmask_a_mux_sel_o  = BMASK_A_REG;
-                  alu_bmask_b_mux_sel_o  = BMASK_B_REG;
-                end
-                3'b100: begin
-                  alu_operator_o = ALU_BSET;
-                  //register variant
-                  regb_used_o            = 1'b1;
-                  alu_bmask_a_mux_sel_o  = BMASK_A_REG;
-                  alu_bmask_b_mux_sel_o  = BMASK_B_REG;
-                end
-                default: illegal_insn_o = 1'b1;
-              endcase
-            end else begin
-              illegal_insn_o = 1'b1;
-            end
 
           ///////////////////////
           // VECTORIAL FLOAT OPS
@@ -1200,42 +1189,22 @@ module cv32e40p_decoder import cv32e40p_pkg::*; import cv32e40p_apu_core_pkg::*;
 
             // PULP specific instructions
             {6'b00_0100, 3'b101}: begin         // Rotate Right - p.ror
-              if (PULP_XPULP) begin
-                alu_operator_o = ALU_ROR;
-              end else begin
-                illegal_insn_o = 1'b1;
-              end
+              alu_operator_o = ALU_ROR;
             end
 
             // PULP specific instructions using only one source register
 
             {6'b00_1000, 3'b000}: begin         // Find First 1 - p.ff1
-              if (PULP_XPULP) begin
-                alu_operator_o = ALU_FF1;
-              end else begin
-                illegal_insn_o = 1'b1;
-              end
+              alu_operator_o = ALU_FF1;
             end
             {6'b00_1000, 3'b001}: begin         // Find Last 1 - p.fl1
-              if (PULP_XPULP) begin
-                alu_operator_o = ALU_FL1;
-              end else begin
-                illegal_insn_o = 1'b1;
-              end
+              alu_operator_o = ALU_FL1;
             end
             {6'b00_1000, 3'b010}: begin         // Count Leading Bits - p.clb
-              if (PULP_XPULP) begin
-                alu_operator_o = ALU_CLB;
-              end else begin
-                illegal_insn_o = 1'b1;
-              end
+              alu_operator_o = ALU_CLB;
             end
             {6'b00_1000, 3'b011}: begin         // Count set bits (popcount) - p.cnt
-              if (PULP_XPULP) begin
-                alu_operator_o = ALU_CNT;
-              end else begin
-                illegal_insn_o = 1'b1;
-              end
+              alu_operator_o = ALU_CNT;
             end
 
             default: begin
@@ -3352,24 +3321,6 @@ module cv32e40p_decoder import cv32e40p_pkg::*; import cv32e40p_apu_core_pkg::*;
               CSR_SCONTEXT :
                 if(DEBUG_TRIGGER_EN != 1)
                   csr_illegal = 1'b1;
-
-            // Hardware Loop register, UHARTID access
-            CSR_LPSTART0,
-              CSR_LPEND0,
-              CSR_LPCOUNT0,
-              CSR_LPSTART1,
-              CSR_LPEND1,
-              CSR_LPCOUNT1,
-              CSR_UHARTID :
-                if(!PULP_XPULP) csr_illegal = 1'b1;
-
-            // PRIVLV access
-            CSR_PRIVLV :
-              if(!PULP_XPULP) begin
-                csr_illegal = 1'b1;
-              end else begin
-                csr_status_o = 1'b1;
-              end
 
             // PMP register access
             CSR_PMPCFG0,

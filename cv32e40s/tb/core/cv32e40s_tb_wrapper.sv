@@ -69,7 +69,6 @@ module cv32e40s_tb_wrapper
 //    // MIKET: commenting out as the cv32e40s RTL wrapper does this as well.
 //    cv32e40s_core_log
 //     #(
-//          .PULP_XPULP            ( PULP_XPULP            ),
 //          .PULP_CLUSTER          ( PULP_CLUSTER          ),
 //          .FPU                   ( FPU                   ),
 //          .PULP_ZFINX            ( PULP_ZFINX            ),

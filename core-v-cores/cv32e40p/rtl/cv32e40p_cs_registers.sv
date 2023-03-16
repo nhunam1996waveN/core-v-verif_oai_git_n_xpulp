@@ -436,14 +436,6 @@ module cv32e40p_cs_registers
       CSR_MHPMEVENT28, CSR_MHPMEVENT29, CSR_MHPMEVENT30, CSR_MHPMEVENT31:
         csr_rdata_int = mhpmevent_q[csr_addr_i[4:0]];
 
-        // hardware loops  (not official)
-        CSR_LPSTART0: csr_rdata_int = 'b0;
-        CSR_LPEND0:   csr_rdata_int = 'b0;
-        CSR_LPCOUNT0: csr_rdata_int = 'b0;
-        CSR_LPSTART1: csr_rdata_int = 'b0;
-        CSR_LPEND1:   csr_rdata_int = 'b0;
-        CSR_LPCOUNT1: csr_rdata_int = 'b0;
-
         // PMP config registers
         CSR_PMPCFG0: csr_rdata_int = USE_PMP ? pmp_reg_q.pmpcfg_packed[0] : '0;
         CSR_PMPCFG1: csr_rdata_int = USE_PMP ? pmp_reg_q.pmpcfg_packed[1] : '0;
@@ -461,15 +453,10 @@ module cv32e40p_cs_registers
         CSR_USTATUS: csr_rdata_int = {27'b0, mstatus_q.upie, 3'h0, mstatus_q.uie};
         // utvec: user trap-handler base address
         CSR_UTVEC: csr_rdata_int = {utvec_q, 6'h0, utvec_mode_q};
-        // duplicated mhartid: unique hardware thread id (not official)
-        CSR_UHARTID: csr_rdata_int = 'b0;
         // uepc: exception program counter
         CSR_UEPC: csr_rdata_int = uepc_q;
         // ucause: exception cause
         CSR_UCAUSE: csr_rdata_int = {ucause_q[5], 26'h0, ucause_q[4:0]};
-
-        // current priv level (not official)
-        CSR_PRIVLV: csr_rdata_int = 'b0;
 
         default: csr_rdata_int = '0;
       endcase
@@ -603,20 +590,6 @@ module cv32e40p_cs_registers
       CSR_MHPMEVENT24, CSR_MHPMEVENT25, CSR_MHPMEVENT26, CSR_MHPMEVENT27,
       CSR_MHPMEVENT28, CSR_MHPMEVENT29, CSR_MHPMEVENT30, CSR_MHPMEVENT31:
         csr_rdata_int = mhpmevent_q[csr_addr_i[4:0]];
-
-        // hardware loops  (not official)
-        CSR_LPSTART0: csr_rdata_int = 'b0;
-        CSR_LPEND0:   csr_rdata_int = 'b0;
-        CSR_LPCOUNT0: csr_rdata_int = 'b0;
-        CSR_LPSTART1: csr_rdata_int = 'b0;
-        CSR_LPEND1:   csr_rdata_int = 'b0;
-        CSR_LPCOUNT1: csr_rdata_int = 'b0;
-
-        /* USER CSR */
-        // dublicated mhartid: unique hardware thread id (not official)
-        CSR_UHARTID: csr_rdata_int = 'b0;
-        // current priv level (not official)
-        CSR_PRIVLV: csr_rdata_int = 'b0;
         default: csr_rdata_int = '0;
       endcase
     end

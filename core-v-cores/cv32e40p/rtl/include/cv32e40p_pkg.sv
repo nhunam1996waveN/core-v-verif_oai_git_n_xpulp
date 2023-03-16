@@ -458,20 +458,6 @@ package cv32e40p_pkg;
     // User Custom CSRs
     ///////////////////////////////////////////////////////
 
-    // Hardware Loop
-    CSR_LPSTART0 = 12'h800,  // Custom CSR. Included if PULP_HWLP = 1
-    CSR_LPEND0   = 12'h801,  // Custom CSR. Included if PULP_HWLP = 1
-    CSR_LPCOUNT0 = 12'h802,  // Custom CSR. Included if PULP_HWLP = 1
-    CSR_LPSTART1 = 12'h804,  // Custom CSR. Included if PULP_HWLP = 1
-    CSR_LPEND1   = 12'h805,  // Custom CSR. Included if PULP_HWLP = 1
-    CSR_LPCOUNT1 = 12'h806,  // Custom CSR. Included if PULP_HWLP = 1
-
-    // User Hart ID
-    CSR_UHARTID = 12'hCC0,  // Custom CSR. User Hart ID
-
-    // Privilege
-    CSR_PRIVLV = 12'hCC1,  // Custom CSR. Privilege Level
-
     ///////////////////////////////////////////////////////
     // Machine CSRs
     ///////////////////////////////////////////////////////

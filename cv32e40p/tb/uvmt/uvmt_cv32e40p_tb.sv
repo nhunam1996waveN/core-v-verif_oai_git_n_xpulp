@@ -36,17 +36,14 @@ module uvmt_cv32e40p_tb;
 
    // DUT (core) parameters: refer to the CV2E40P User Manual.
 `ifdef NO_PULP
-   parameter int CORE_PARAM_PULP_XPULP       = 0;
    parameter int CORE_PARAM_PULP_CLUSTER     = 0;
    parameter int CORE_PARAM_PULP_ZFINX       = 0;
 `else
    `ifdef PULP
-      parameter int CORE_PARAM_PULP_XPULP       = 1;
       parameter int CORE_PARAM_PULP_CLUSTER     = 0;
       parameter int CORE_PARAM_PULP_ZFINX       = 0;
    `else
       // If you don't explicitly specify either NO_PULP or PULP, you get NO_PULP
-      parameter int CORE_PARAM_PULP_XPULP       = 0;
       parameter int CORE_PARAM_PULP_CLUSTER     = 0;
       parameter int CORE_PARAM_PULP_ZFINX       = 0;
    `endif
@@ -110,7 +107,6 @@ module uvmt_cv32e40p_tb;
    * a few mods to bring unused ports from the CORE to this level using SV interfaces.
    */
    uvmt_cv32e40p_dut_wrap  #(
-                             .PULP_XPULP        (CORE_PARAM_PULP_XPULP),
                              .PULP_CLUSTER      (CORE_PARAM_PULP_CLUSTER),
                              .PULP_ZFINX        (CORE_PARAM_PULP_ZFINX),
                              .NUM_MHPMCOUNTERS  (CORE_PARAM_NUM_MHPMCOUNTERS),
@@ -491,7 +487,6 @@ module uvmt_cv32e40p_tb;
      uvm_config_db#(bit[31:0])::set(.cntxt(null), .inst_name("*"), .field_name("evalue"), .value(32'h00000000));
 
      // DUT and ENV parameters
-     uvm_config_db#(int)::set(.cntxt(null), .inst_name("*"), .field_name("CORE_PARAM_PULP_XPULP"),       .value(CORE_PARAM_PULP_XPULP)      );
      uvm_config_db#(int)::set(.cntxt(null), .inst_name("*"), .field_name("CORE_PARAM_PULP_CLUSTER"),     .value(CORE_PARAM_PULP_CLUSTER)    );
      uvm_config_db#(int)::set(.cntxt(null), .inst_name("*"), .field_name("CORE_PARAM_PULP_ZFINX"),       .value(CORE_PARAM_PULP_ZFINX)      );
      uvm_config_db#(int)::set(.cntxt(null), .inst_name("*"), .field_name("CORE_PARAM_NUM_MHPMCOUNTERS"), .value(CORE_PARAM_NUM_MHPMCOUNTERS));

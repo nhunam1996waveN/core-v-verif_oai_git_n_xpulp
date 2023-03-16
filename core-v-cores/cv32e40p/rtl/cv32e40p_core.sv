@@ -1112,7 +1112,7 @@ module cv32e40p_core
   // Assertions
   //----------------------------------------------------------------------------
 
-  // PULP_XPULP, PULP_CLUSTER, FPU, PULP_ZFINX
+  //PULP_CLUSTER, FPU, PULP_ZFINX
   always_ff @(posedge rst_ni) begin
     if (PULP_CLUSTER) begin
       $warning("PULP_CLUSTER == 1 has not been verified yet");

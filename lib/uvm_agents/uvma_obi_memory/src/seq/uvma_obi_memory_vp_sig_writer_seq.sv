@@ -102,7 +102,7 @@ task uvma_obi_memory_vp_sig_writer_seq_c::vp_body(uvma_obi_memory_mon_trn_c mon_
          2: begin
             for (int unsigned ii=signature_start_address; ii<signature_end_address; ii += 4) begin
                `uvm_info("VP_SIG_WRITER", "Dumping signature", UVM_HIGH/*NONE*/)
-               $display("@%t debug_signature: ii = %h ",$time(),ii);
+               // $display("@%t debug_signature: ii = %h ",$time(),ii);
                if (use_sig_file) begin
                   $fdisplay(sig_fd, "%x%x%x%x",cntxt.mem.read(ii+3),
                                                 cntxt.mem.read(ii+2),
